@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Vodný kvíz 🐸 </h1>
+    <h3> Ste na otázke č. <span id="qno">1</span> z <span id="qtot"> 5</span></h3>
+    <hr>
+    <h4> Vaše skóre, vizuálne zobrazené</h4>
+    <div id="content">
+        <div class="dc" id="d1"></div>
+        <div class="dc" id="d2"></div>
+        <div class="dc" id="d3"></div>
+        <div class="dc" id="d4"></div>
+        <div class="dc" id="d5"></div>
+    </div>
+    
+    <form id="quiz">
+    <fieldset class="fset" id="f1">
+        <legend> Hl. mesto Bulharska </legend>
+        <input type="radio" name="1" id="r1"> Sofia <br>
+        <input type="radio" name="1" > Belehrad <br>
+        <input type="radio" name="1" > Ljubljana
+    </fieldset>
+    <fieldset class="fset" id="f2">
+        <legend> Soľná formula </legend>
+        <input type="checkbox" id="r2"> NaCl<sub>2</sub> <br>
+        <input type="checkbox" > NaAs<sub>2</sub> <br>
+        <input type="checkbox" id="r3"> Na<sub>2</sub>Cl<sub>4</sub>
+        <p> *choose multiple </p>
+    </fieldset>
+    <fieldset class="fset" id="f3">
+        <legend> % černochov v US </legend>
+        <input type="radio" name="3" id="r4"> 14% <br>
+        <input type="radio" name="3" > 25% <br>
+        <input type="radio" name="3" > 6% 
+    </fieldset>
+    <fieldset class="fset" id="f4">
+        <legend> Juraj Mlich je </legend>
+        <input type="radio" name="4"> distribútor 🐸 <br>
+        <input type="radio" name="4" id="r5"> programátor <br>
+        <input type="radio" name="4"> anime fanatik
+    </fieldset>
+    <fieldset class="fset" id="f5">
+        <legend> GBAS bol založený roku </legend>
+        <input type="text" id="r6" onkeydown="if(event.keyCode == 13) event.preventDefault();">
+    </fieldset>
+
+    <button type="button" class="col-xl-3 offset-xl-5 col-lg-3 offset-lg-5 col-md-3 offset-md-5 col-sm-3 offset-sm-5" id="next"> Ďaľšia otázka </button>
+    </form>
+
+    <script>
+    var curr = 1;
+    let q = document.getElementById('qno');
+    let t = document.getElementById('qtot');
+    let f1 = document.getElementById('f1'); 
+    let f2 = document.getElementById('f2');
+    let f3 = document.getElementById('f3');
+    let f4 = document.getElementById('f4');
+    let f5 = document.getElementById('f5');
+    let next = document.getElementById('next');
+    let score = 0;
+    let r1 = document.getElementById('r1');
+    let r2 = document.getElementById('r2');
+    let r3 = document.getElementById('r3');
+    let r4 = document.getElementById('r4');
+    let r5 = document.getElementById('r5');
+    let r6 = document.getElementById('r6');
+    let quiz = document.getElementById('quiz');
+    let d1 = document.getElementById('d1');
+    let d2 = document.getElementById('d2');
+    let d3 = document.getElementById('d3');
+    let d4 = document.getElementById('d4');
+    let d5 = document.getElementById('d5');
+
+
+
+    
+    next.addEventListener('click', function() {
+        for (curr; curr < 6;) {
+            // Changes the button name
+            if (curr === 4) {
+                console.log("curr = 4, Initiated");
+                next.innerHTML = "Dokonči test";
+            }
+
+            // Resets the quiz
+            if (curr === 5) {
+                console.log("curr = 5, Initiated");
+                if (r6.value === "1991" || r6.value === "1993") {score++; r6.value = ""; d5.style.background = "green";} 
+                console.log("Reset the counter, Reset question number.");
+                    curr = 1;
+                    qno.innerHTML = "1";
+                    next.innerHTML = "Ďaľšia otázka";
+                    
+                    quiz.reset();
+                    // Resets the questions' visibility
+                        f1.style.visibility = "visible";                        
+                        f2.style.visibility = "hidden";
+                        f3.style.visibility = "hidden";
+                        f4.style.visibility = "hidden";
+                        f5.style.visibility = "hidden";
+                    console.log("Alerted the user.");
+           
+                    //Alerts of the score
+
+                    console.log(score);
+                    alert("Good job!" + '\n \n' + "You scored: "+ score);
+                    //Resets the score
+                    score = 0;
+                    //Resets the form
+                    d1.style.background = "#fff"
+                    d2.style.background = "#fff"
+                    d3.style.background = "#fff"
+                    d4.style.background = "#fff"
+                    d5.style.background = "#fff"
+                    break;
+            }
+            
+            // Questions changing
+            if (document.getElementById('f'+curr).style.visibility = "visible") {
+                    console.log("q repeat, Initiated");
+                    document.getElementById('f'+curr).style.visibility = "hidden";
+                    
+                    console.log("Current one set hidden."+" Curr is: "+curr);
+                    curr++;
+                    qno.innerHTML++;
+                    // Checks the answers
+                    if (r1.checked == true) {score++; r1.checked = false; d1.style.background = "green";} 
+                    if (r2.checked == true && r3.checked == true) {score++; r2.checked = false; r3.checked = false; d2.style.background = "green";} 
+                    if (r4.checked == true) {score++; r4.checked = false; d3.style.background = "green";}
+                    if (r5.checked == true) {score++; r5.checked = false; d4.style.background = "green";}
+                    
+                    console.log("score: "+score);                 
+                    document.getElementById('f'+curr).style.visibility = "visible";
+                    
+                    console.log("Next one set invis."+" Curr is: "+curr);
+                break;
+            }
+            
+            console.log("nothing, Initiated");
+        }
+
+        
+    });
+    </script>
+</body>
+</html>
+
+

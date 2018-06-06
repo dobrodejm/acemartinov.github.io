@@ -1,0 +1,52 @@
+fieldset {
+    position: absolute;
+    visibility: hidden;
+    margin-left: 40%;    
+    
+    padding: 0.5em;
+    border: 0.3px solid #333;
+}
+#f1 {
+    visibility: visible;
+}
+h1,h3 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: normal;
+}
+h4 {
+    font-family: 'Segoe UI', sans-serif;
+    float:right;
+    display: block;
+}
+h3 {
+    margin-top: -25px;
+    float: right;
+    background: #333;
+    color: #f9f9f9;
+    padding: 0.2em 0.2em 0em 0.2em;
+}
+#next {
+    position: absolute;
+    margin-top: 200px;
+    height: 100px;
+    width: 200px;
+}
+p {
+    margin: 10px 0px 0px 0px;
+    color: #555;
+    font-size: 0.75em;
+}
+#content {
+    position: absolute;
+    margin-left: 20px;
+}
+.dc {
+    width: 50px;
+    height: 50px;
+    
+    display: inline-flex;
+    margin-right: -5px;
+    border: 3px solid black;
+}
