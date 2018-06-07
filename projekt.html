@@ -132,10 +132,10 @@
                     curr++;
                     qno.innerHTML++;
                     // Checks the answers
-                    if (r1.checked == true) {score++; r1.checked = false; d1.style.background = "green";} 
-                    if (r2.checked == true && r3.checked == true) {score++; r2.checked = false; r3.checked = false; d2.style.background = "green";} 
-                    if (r4.checked == true) {score++; r4.checked = false; d3.style.background = "green";}
-                    if (r5.checked == true) {score++; r5.checked = false; d4.style.background = "green";}
+                    if (r1.checked ) {score++; r1.checked = false; d1.style.background = "green";} 
+                    if (r2.checked && r3.checked) {score++; r2.checked = false; r3.checked = false; d2.style.background = "green";} 
+                    if (r4.checked) {score++; r4.checked = false; d3.style.background = "green";}
+                    if (r5.checked) {score++; r5.checked = false; d4.style.background = "green";}
                     
                     console.log("score: "+score);                 
                     document.getElementById('f'+curr).style.visibility = "visible";
