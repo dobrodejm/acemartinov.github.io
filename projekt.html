@@ -114,7 +114,15 @@
                     else {d5.style.background = "rgb(203,50,52)"};
                     // Alerts of the score
                         console.log(score);
-                        alert("Good job!" + '\n \n' + "You scored: "+ score);
+                        switch (score) {
+                            case 5: alert("Perfect"+'\n \n'+"You scored: 5"); break;
+                            case 4: alert("Above average"+'\n \n'+"You scored: 4"); break;
+                            case 3: alert("Average"+'\n \n'+"You scored: 3"); break;
+                            case 2: alert("Below average"+'\n \n'+"You scored: 2"); break;
+                            case 1: alert("Unsatisfactory"+'\n \n'+"You scored: 1"); break;
+                            case 0: alert("Ty si pripad"+'\n \n'+"You scored: nič kámo"); break;
+
+                        }
                     // Resets the questions' visibility
                         f1.style.visibility = "visible";                        
                         f2.style.visibility = "hidden";
@@ -150,27 +158,40 @@
                     console.log("Last question set hidden."+" Curr is: "+curr);
                     curr++;
                     qno.innerHTML++;
-                    // Q4 colors
+                    // Q4 colors animated
                     c1.addEventListener('click', function() {
+                            // Variable to track the correct answer
                                 r5 = 0;
-                                this.style.border = "4px solid #f9f9f9";
-                                c2.style.border = "0";
-                                c3.style.border = "0";
+                            // Styling to enable UX, outline is dashed and borders are for the intuitiveness
+                                this.style.outline = "4px dashed #333";
+                                this.style.border = "0";
+                                c2.style.outline="";
+                                c3.style.outline="";
+                                c2.style.border="";
+                                c3.style.border="";
+                                
+
                             })
                     c2.addEventListener('click', function () {
                                 r5 = 0;
-                                this.style.border = "4px solid #f9f9f9";
-                                c1.style.border = "0";
-                                c3.style.border = "0";
+                                this.style.outline = "4px dashed #333";
+                                this.style.border = "0";
+                                c1.style.outline="";
+                                c3.style.outline="";
+                                c1.style.border="";
+                                c3.style.border="";
                             })
                     c3.addEventListener('click', function (){
                                 r5 = 1;
-                                c3.style.border = "4px solid #f9f9f9";
-                                c1.style.border = "0";
-                                c2.style.border = "0";
+                                this.style.outline = "4px dashed #333";
+                                this.style.border = "0";
+                                c1.style.outline="";
+                                c2.style.outline="";
+                                c1.style.border="";
+                                c2.style.border="";
                             })
 
-                        
+
                 // Checks the questions one by one
                     switch (curr)     {
                         case 2: console.log(" - Evaluated Q1");
@@ -195,8 +216,7 @@
                     console.log("Next question is shown "+" Curr is: "+curr);
                 break;
             }
-            
-            console.log("nothing, Initiated");
+
         }
 
         
