@@ -31,7 +31,7 @@
     <fieldset class="fset" id="f2">
         <legend> Soľná formula </legend>
         <input type="checkbox" id="r2"> NaCl<sub>2</sub> <br>
-        <input type="checkbox" > NaAs<sub>2</sub> <br>
+        <input type="checkbox" id ="r2n"> NaAs<sub>2</sub> <br>
         <input type="checkbox" id="r3"> Na<sub>2</sub>Cl<sub>4</sub>
         <p id="mult"> *choose multiple </p>
     </fieldset>
@@ -42,10 +42,15 @@
         <input type="radio" name="3" > 6% 
     </fieldset>
     <fieldset class="fset" id="f4">
-        <legend> Juraj Mlich je </legend>
-        <input type="radio" name="4"> distribútor 🐸 <br>
-        <input type="radio" name="4" id="r5"> programátor <br>
-        <input type="radio" name="4"> anime fanatik
+        <legend> rgb(161,99,162) </legend>
+        <div class="palettecontainer">
+                <div class="color1" id="c1" style="background-color:#7eed94">
+                                        </div>
+                <div class="color1" id="c2" style="background-color:#1a2c79">
+                                        </div>
+                <div class="color1" id="c3" style="background-color:#a163a2">
+        </div>
+        </div>
     </fieldset>
     <fieldset class="fset" id="f5">
         <legend> GBAS bol založený (roku) </legend>
@@ -57,27 +62,38 @@
 
     <script>
     var curr = 1;
+    // question number 
     let qno = document.getElementById('qno');
-    let t = document.getElementById('qtot');
+    // individual questions
     let f1 = document.getElementById('f1'); 
     let f2 = document.getElementById('f2');
     let f3 = document.getElementById('f3');
     let f4 = document.getElementById('f4');
     let f5 = document.getElementById('f5');
+    // next Q button
     let next = document.getElementById('next');
+    // sets the score
     let score = 0;
+    // answers (buttons/checkboxes/inputs)
     let r1 = document.getElementById('r1');
     let r2 = document.getElementById('r2');
+    let r2n = document.getElementById('r2n');
     let r3 = document.getElementById('r3');
     let r4 = document.getElementById('r4');
     let r5 = document.getElementById('r5');
     let r6 = document.getElementById('r6');
+    // the form
     let quiz = document.getElementById('quiz');
+    // the score
     let d1 = document.getElementById('d1');
     let d2 = document.getElementById('d2');
     let d3 = document.getElementById('d3');
     let d4 = document.getElementById('d4');
     let d5 = document.getElementById('d5');
+    // Q4, colors
+    var c1 = document.getElementById('c1');
+    var c2 = document.getElementById('c2');
+    var c3 = document.getElementById('c3');
 
 
 
@@ -109,9 +125,11 @@
                     // Resets the UI 
                         console.log("Reset the counter, Reset question number.");
                         curr = 1;
+                        score = 0;
                         qno.innerHTML = "1";
                         next.innerHTML = "Ďaľšia otázka";
                         quiz.reset();
+
                     
                     //Resets the form
                         d1.style.background = "#fff"
@@ -119,7 +137,7 @@
                         d3.style.background = "#fff"
                         d4.style.background = "#fff"
                         d5.style.background = "#fff"
-
+                        
                         break;
             }
             
@@ -139,13 +157,28 @@
                         if (r1.checked ) {score++; d1.style.background = "rgb(0,187,45)";} else {d1.style.background = "rgb(203,50,52)";}
                         break;
                         case 3: console.log(" - Evaluated Q2");
-                        if (r2.checked && r3.checked) {score++; d2.style.background = "rgb(0,187,45)";} else {d2.style.background = "rgb(203,50,52)";}
+                        if (r2.checked && r3.checked && r2n.checked == false) {score++; d2.style.background = "rgb(0,187,45)";} else {d2.style.background = "rgb(203,50,52)";}
                         break;
                         case 4: console.log(" - Evaluated Q3");
                         if (r4.checked) {score++; d3.style.background = "rgb(0,187,45)";} else {d3.style.background = "rgb(203,50,52)";}
                         break;
                         case 5: console.log(" - Evaluated Q4");
-                        if (r5.checked) {score++; d4.style.background = "rgb(0,187,45)";} else {d4.style.background = "rgb(203,50,52)";}
+                            c1.onclick = function() {
+                                console.log("Q4 is misled");
+                                d4.style.background = "rgb(203,50,52)";
+                                this.style.border = "2px solid black";
+                            }
+                            c2.onclick = function () {
+                                console.log("Q4 is misled");
+                                d4.style.background = "rgb(203,50,52)";
+                                c2.style.border = "2px solid black";
+                            }
+                            c3.onclick = function (){
+                                score++;
+                                console.log("Q4 is correct");
+                                d4.style.background = "rgb(0,187,45)";
+                                c3.style.border = "2px solid black";
+                            }
                         break;
                         // Case for the last question was added into the Final Question part of the code
                     }            
