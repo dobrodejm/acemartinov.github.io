@@ -141,3 +141,28 @@ div#mob-score {
    }
 
 }
+@media (max-width:520px) {
+    h1 {
+        margin-left: 20%;
+        text-align:left;
+    }
+    fieldset {
+        margin-left: 20%;
+        margin-top: 30%;
+    }
+    h3 {
+        margin-top: 5%;
+        position: absolute;
+        margin-left: 20%; 
+        font-size: 1.3rem;  
+   }
+   #content {
+       margin-left: 20%;
+       margin-top: 5%;
+   }
+   #next {
+       margin-left: 20%;
+       margin-top: 65%;
+   }
+
+}
