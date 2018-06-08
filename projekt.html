@@ -80,7 +80,7 @@
     let r2n = document.getElementById('r2n');
     let r3 = document.getElementById('r3');
     let r4 = document.getElementById('r4');
-    let r5 = document.getElementById('r5');
+    let r5 = 0;
     let r6 = document.getElementById('r6');
     // the form
     let quiz = document.getElementById('quiz');
@@ -150,7 +150,27 @@
                     console.log("Last question set hidden."+" Curr is: "+curr);
                     curr++;
                     qno.innerHTML++;
+                    // Q4 colors
+                    c1.addEventListener('click', function() {
+                                r5 = 0;
+                                this.style.border = "4px solid #f9f9f9";
+                                c2.style.border = "0";
+                                c3.style.border = "0";
+                            })
+                    c2.addEventListener('click', function () {
+                                r5 = 0;
+                                this.style.border = "4px solid #f9f9f9";
+                                c1.style.border = "0";
+                                c3.style.border = "0";
+                            })
+                    c3.addEventListener('click', function (){
+                                r5 = 1;
+                                c3.style.border = "4px solid #f9f9f9";
+                                c1.style.border = "0";
+                                c2.style.border = "0";
+                            })
 
+                    
                 // Checks the questions one by one
                     switch (curr)     {
                         case 2: console.log(" - Evaluated Q1");
@@ -163,22 +183,7 @@
                         if (r4.checked) {score++; d3.style.background = "rgb(0,187,45)";} else {d3.style.background = "rgb(203,50,52)";}
                         break;
                         case 5: console.log(" - Evaluated Q4");
-                            c1.onclick = function() {
-                                console.log("Q4 is misled");
-                                d4.style.background = "rgb(203,50,52)";
-                                this.style.border = "2px solid black";
-                            }
-                            c2.onclick = function () {
-                                console.log("Q4 is misled");
-                                d4.style.background = "rgb(203,50,52)";
-                                c2.style.border = "2px solid black";
-                            }
-                            c3.onclick = function (){
-                                score++;
-                                console.log("Q4 is correct");
-                                d4.style.background = "rgb(0,187,45)";
-                                c3.style.border = "2px solid black";
-                            }
+                        if (r5 == 1) {score++; d4.style.background = "rgb(0,187,45)";} else {d4.style.background = "rgb(203,50,52)";}
                         break;
                         // Case for the last question was added into the Final Question part of the code
                     }            
