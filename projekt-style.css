@@ -22,14 +22,12 @@ legend {
 }
 h1,h3 {
     margin: 0;
-    text-align: center;
+    text-align: left;
     font-family: 'Segoe UI', sans-serif;
     font-weight: normal;
 }
-h4 {
-    font-family: 'Segoe UI', sans-serif;
-    float:right;
-    display: block;
+h1 {
+    margin-left: 40%;
 }
 /* Current question (top right) */
 h3 {
@@ -45,6 +43,7 @@ h3 {
     color: #f9f9f9;
     position: absolute;
     margin-top: 18%;
+    margin-left: 40%;
     height: 100px;
     width: 200px;
     transition: 0.2s ease;
@@ -87,5 +86,58 @@ div.color1 {
 div.color1:hover {
     border: 4px solid #f9f9f9;
     cursor: pointer;
+
+}
+/* score for mobile users, hidden on desktops */
+div#mob-score {
+    display: hidden;
+}
+@media (max-width:860px) {
+    h1 {
+        margin-left: 35%;
+        text-align:left;
+    }
+    fieldset {
+        margin-left: 35%;
+        margin-top: 20%;
+    }
+    h3 {
+        margin-top: 5%;
+        position: absolute;
+        margin-left: 35%; 
+        font-size: 1.3rem;  
+   }
+   #content {
+       margin-left: 35%;
+       margin-top: 5%;
+   }
+   #next {
+       margin-left: 35%;
+       margin-top: 40%;
+   }
+}
+@media (max-width:670px) {
+    h1 {
+        margin-left: 20%;
+        text-align:left;
+    }
+    fieldset {
+        margin-left: 20%;
+        margin-top: 25%;
+    }
+    h3 {
+        margin-top: 5%;
+        position: absolute;
+        margin-left: 20%; 
+        font-size: 1.3rem;  
+   }
+   #content {
+       margin-left: 20%;
+       margin-top: 5%;
+   }
+   #next {
+       margin-left: 20%;
+       margin-top: 52%;
+   }
 
 }
