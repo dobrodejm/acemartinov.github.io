@@ -57,7 +57,7 @@
 
     <script>
     var curr = 1;
-    let q = document.getElementById('qno');
+    let qno = document.getElementById('qno');
     let t = document.getElementById('qtot');
     let f1 = document.getElementById('f1'); 
     let f2 = document.getElementById('f2');
@@ -84,63 +84,77 @@
     
     next.addEventListener('click', function() {
         for (curr; curr < 6;) {
-            // Changes the button name
+            // Changes the UI to suit the final question
             if (curr === 4) {
                 console.log("curr = 4, Initiated");
                 next.innerHTML = "Dokonči test";
             }
 
-            // Resets the quiz
+            // Final question
             if (curr === 5) {
-                console.log("curr = 5, Initiated");
-                if (r6.value === "1991" || r6.value === "1993") {score++; r6.value = ""; d5.style.background = "green";} 
-                console.log("Reset the counter, Reset question number.");
-                    curr = 1;
-                    qno.innerHTML = "1";
-                    next.innerHTML = "Ďaľšia otázka";
-                    
-                    quiz.reset();
+                console.log("Final Question Initiated");
+                // Last question checked
+                    if (r6.value === "1991" || r6.value === "1993") {score++; d5.style.background = "green";} 
+                    else {d5.style.background = "red"};
+                    // Alerts of the score
+                        console.log(score);
+                        alert("Good job!" + '\n \n' + "You scored: "+ score);
                     // Resets the questions' visibility
                         f1.style.visibility = "visible";                        
                         f2.style.visibility = "hidden";
                         f3.style.visibility = "hidden";
                         f4.style.visibility = "hidden";
                         f5.style.visibility = "hidden";
-                    console.log("Alerted the user.");
-           
-                    //Alerts of the score
-
-                    console.log(score);
-                    alert("Good job!" + '\n \n' + "You scored: "+ score);
-                    //Resets the score
-                    score = 0;
+                            console.log("Alerted the user.");
+                    // Resets the UI 
+                        console.log("Reset the counter, Reset question number.");
+                        curr = 1;
+                        qno.innerHTML = "1";
+                        next.innerHTML = "Ďaľšia otázka";
+                        quiz.reset();
+                    
                     //Resets the form
-                    d1.style.background = "#fff"
-                    d2.style.background = "#fff"
-                    d3.style.background = "#fff"
-                    d4.style.background = "#fff"
-                    d5.style.background = "#fff"
-                    break;
+                        d1.style.background = "#fff"
+                        d2.style.background = "#fff"
+                        d3.style.background = "#fff"
+                        d4.style.background = "#fff"
+                        d5.style.background = "#fff"
+
+                        break;
             }
             
-            // Questions changing
+            // Next Question
             if (document.getElementById('f'+curr).style.visibility = "visible") {
-                    console.log("q repeat, Initiated");
+                //Proceeds to the next question
+                    console.log("Next Question Initiated");
                     document.getElementById('f'+curr).style.visibility = "hidden";
                     
-                    console.log("Current one set hidden."+" Curr is: "+curr);
+                    console.log("Last question set hidden."+" Curr is: "+curr);
                     curr++;
                     qno.innerHTML++;
-                    // Checks the answers
-                    if (r1.checked ) {score++; r1.checked = false; d1.style.background = "green";} 
-                    if (r2.checked && r3.checked) {score++; r2.checked = false; r3.checked = false; d2.style.background = "green";} 
-                    if (r4.checked) {score++; r4.checked = false; d3.style.background = "green";}
-                    if (r5.checked) {score++; r5.checked = false; d4.style.background = "green";}
+
+                // Checks the questions one by one
+                    switch (curr)     {
+                        case 2: console.log(" - Evaluated Q1");
+                        if (r1.checked ) {score++; d1.style.background = "green";} else {d1.style.background = "red";}
+                        break;
+                        case 3: console.log(" - Evaluated Q2");
+                        if (r2.checked && r3.checked) {score++; d2.style.background = "green";} else {d2.style.background = "red";}
+                        break;
+                        case 4: console.log(" - Evaluated Q3");
+                        if (r4.checked) {score++; d3.style.background = "green";} else {d3.style.background = "red";}
+                        break;
+                        case 5: console.log(" - Evaluated Q4");
+                        if (r5.checked) {score++; d4.style.background = "green";} else {d4.style.background = "red";}
+                        break;
+                        // Case for the last question was added into the Final Question part of the code
+                    }            
                     
-                    console.log("score: "+score);                 
+                // Tracks the current score    
+                    console.log(" - score: "+score);                 
                     document.getElementById('f'+curr).style.visibility = "visible";
                     
-                    console.log("Next one set invis."+" Curr is: "+curr);
+                    console.log("Next question is shown "+" Curr is: "+curr);
                 break;
             }
             
