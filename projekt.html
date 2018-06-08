@@ -12,8 +12,8 @@
     <h1> Vodný kvíz 🐸 </h1>
     <h3> Ste na otázke č. <span id="qno">1</span> z <span id="qtot"> 5</span></h3>
     <hr>
-    <h4> Vaše skóre, vizuálne zobrazené</h4>
     <div id="content">
+        <p>Skóre</p>
         <div class="dc" id="d1"></div>
         <div class="dc" id="d2"></div>
         <div class="dc" id="d3"></div>
@@ -33,7 +33,7 @@
         <input type="checkbox" id="r2"> NaCl<sub>2</sub> <br>
         <input type="checkbox" > NaAs<sub>2</sub> <br>
         <input type="checkbox" id="r3"> Na<sub>2</sub>Cl<sub>4</sub>
-        <p> *choose multiple </p>
+        <p id="mult"> *choose multiple </p>
     </fieldset>
     <fieldset class="fset" id="f3">
         <legend> % černochov v US </legend>
@@ -48,7 +48,7 @@
         <input type="radio" name="4"> anime fanatik
     </fieldset>
     <fieldset class="fset" id="f5">
-        <legend> GBAS bol založený roku </legend>
+        <legend> GBAS bol založený (roku) </legend>
         <input type="text" id="r6" onkeydown="if(event.keyCode == 13) event.preventDefault();">
     </fieldset>
 
@@ -94,8 +94,8 @@
             if (curr === 5) {
                 console.log("Final Question Initiated");
                 // Last question checked
-                    if (r6.value === "1991" || r6.value === "1993") {score++; d5.style.background = "green";} 
-                    else {d5.style.background = "red"};
+                    if (r6.value === "1991" || r6.value === "1993") {score++; d5.style.background = "rgb(0,187,45)";} 
+                    else {d5.style.background = "rgb(203,50,52)"};
                     // Alerts of the score
                         console.log(score);
                         alert("Good job!" + '\n \n' + "You scored: "+ score);
@@ -136,16 +136,16 @@
                 // Checks the questions one by one
                     switch (curr)     {
                         case 2: console.log(" - Evaluated Q1");
-                        if (r1.checked ) {score++; d1.style.background = "green";} else {d1.style.background = "red";}
+                        if (r1.checked ) {score++; d1.style.background = "rgb(0,187,45)";} else {d1.style.background = "rgb(203,50,52)";}
                         break;
                         case 3: console.log(" - Evaluated Q2");
-                        if (r2.checked && r3.checked) {score++; d2.style.background = "green";} else {d2.style.background = "red";}
+                        if (r2.checked && r3.checked) {score++; d2.style.background = "rgb(0,187,45)";} else {d2.style.background = "rgb(203,50,52)";}
                         break;
                         case 4: console.log(" - Evaluated Q3");
-                        if (r4.checked) {score++; d3.style.background = "green";} else {d3.style.background = "red";}
+                        if (r4.checked) {score++; d3.style.background = "rgb(0,187,45)";} else {d3.style.background = "rgb(203,50,52)";}
                         break;
                         case 5: console.log(" - Evaluated Q4");
-                        if (r5.checked) {score++; d4.style.background = "green";} else {d4.style.background = "red";}
+                        if (r5.checked) {score++; d4.style.background = "rgb(0,187,45)";} else {d4.style.background = "rgb(203,50,52)";}
                         break;
                         // Case for the last question was added into the Final Question part of the code
                     }            

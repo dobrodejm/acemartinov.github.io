@@ -2,12 +2,23 @@ fieldset {
     position: absolute;
     visibility: hidden;
     margin-left: 40%;    
-    
     padding: 0.5em;
     border: 0.3px solid #333;
+    width: 270px;
+}
+legend {
+    font-size: 1.7rem;
+    text-align: center;
+}
+#f6 legend {
+    font-size: 1.4rem;
 }
 #f1 {
     visibility: visible;
+}
+/* to align the final question's input */
+#r6 {
+    margin-left: 14px;
 }
 h1,h3 {
     margin: 0;
@@ -20,6 +31,7 @@ h4 {
     float:right;
     display: block;
 }
+/* Current question (top right) */
 h3 {
     margin-top: -25px;
     float: right;
@@ -27,25 +39,40 @@ h3 {
     color: #f9f9f9;
     padding: 0.2em 0.2em 0em 0.2em;
 }
+/* Next question button */
 #next {
+    background-color: rgb(32, 123, 192);
+    color: #f9f9f9;
     position: absolute;
-    margin-top: 200px;
+    margin-top: 18%;
     height: 100px;
     width: 200px;
+    transition: 0.2s ease;
+    font-size: 1.1rem;
 }
-p {
+#next:hover {
+    background-color: rgb(45, 235, 83);
+    color: #0c0c0c;
+    font-size: 1.5rem;
+}
+/* Q2, small text */
+p#mult {
     margin: 10px 0px 0px 0px;
     color: #555;
     font-size: 0.75em;
 }
+/* Score */
 #content {
     position: absolute;
     margin-left: 20px;
 }
+p {
+    font-size: 2rem;
+    margin: -0.2rem 0 -0.2rem 0;
+}
 .dc {
     width: 50px;
     height: 50px;
-    
     display: inline-flex;
     margin-right: -5px;
     border: 3px solid black;
