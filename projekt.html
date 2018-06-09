@@ -124,7 +124,6 @@
                             case 2: alert("Below average"+'\n \n'+"You scored: 2"); break;
                             case 1: alert("Unsatisfactory"+'\n \n'+"You scored: 1"); break;
                             case 0: alert("Ty si pripad"+'\n \n'+"You scored: nič kámo"); break;
-
                         }
                     // Resets the questions' visibility
                         f1.style.visibility = "visible";                        
@@ -132,16 +131,17 @@
                         f3.style.visibility = "hidden";
                         f4.style.visibility = "hidden";
                         f5.style.visibility = "hidden";
-                            console.log("Alerted the user.");
+                    // Resets Q4
+                        c1.style.outline = "";
+                        c2.style.outline = "";
+                        c3.style.outline = "";
                     // Resets the UI 
                         console.log("Reset the counter, Reset question number.");
                         curr = 1;
                         score = 0;
                         qno.innerHTML = "1";
                         next.innerHTML = "Ďaľšia otázka";
-                        quiz.reset();
-
-                    
+                        quiz.reset();                    
                     //Resets the form
                         d1.style.background = "#fff"
                         d2.style.background = "#fff"
@@ -169,19 +169,17 @@
                                 this.style.outline = "4px dashed #333";
                                 this.style.border = "0";
                                 c2.style.outline="";
-                                c3.style.outline="";
                                 c2.style.border="";
+                                c3.style.outline="";
                                 c3.style.border="";
-                                
-
                             })
                     c2.addEventListener('click', function () {
                                 r5 = 0;
                                 this.style.outline = "4px dashed #333";
                                 this.style.border = "0";
                                 c1.style.outline="";
-                                c3.style.outline="";
                                 c1.style.border="";
+                                c3.style.outline="";
                                 c3.style.border="";
                             })
                     c3.addEventListener('click', function (){
@@ -189,8 +187,8 @@
                                 this.style.outline = "4px dashed #333";
                                 this.style.border = "0";
                                 c1.style.outline="";
-                                c2.style.outline="";
                                 c1.style.border="";
+                                c2.style.outline="";
                                 c2.style.border="";
                             })
 
