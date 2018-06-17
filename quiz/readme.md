@@ -1,0 +1,2 @@
+## Quiz
+This is a quiz I did as a final project for my programming class. The task was to make use of different inputs, such as a textbox, checkboxes, radio buttons and some sort of visual input (I used colors).
