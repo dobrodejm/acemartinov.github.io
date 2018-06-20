@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ask the boar vessel</h1>
+    <img src="bv.jpg" id="nut">
+    <div id="output"></div>
+
+<script>
+let op = document.getElementById('output');
+let r;
+document.getElementById('nut').addEventListener('click', function() {
+    if (document.body.style.backgroundColor === "white") {
+        document.body.style.backgroundColor = "red";
+        document.getElementById('output').style.color = "#f9f9f9";
+    } else {
+        document.body.style.backgroundColor = "white";
+        document.getElementById('output').style.color = "#333";
+    }
+    r = Math.floor(Math.random()*6);
+    switch (r) {
+        case 0: op.innerHTML = "Yes definitely";
+        break;
+        case 1: op.innerHTML = "iunno nigga";
+        break;
+        case 2: op.innerHTML = "probably";
+        break;
+        case 3: op.innerHTML = "Highly Unlikely";
+        break;
+        case 4: op.innerHTML = "Ask again";
+        break;
+        case 5: op.innerHTML = "yeeeessss";
+        break;
+    }
+});
+
+</script>
+</body>
+</html>
