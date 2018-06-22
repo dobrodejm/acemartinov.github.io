@@ -1,0 +1,12 @@
+div {
+    width: 50%;
+    display: hidden;
+    margin: 10px;
+    border: 1px solid black;
+}
+img {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
