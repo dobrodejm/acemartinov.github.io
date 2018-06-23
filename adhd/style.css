@@ -10,3 +10,7 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
