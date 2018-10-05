@@ -6,19 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Timbre</title>
     <style>
-    body {background-color: #333; color: #f9f9f9;}
+    body {background-color: #f9f9f9; color: #333;}
+    form {background-color: #b7eeff;}
     </style>
 </head>
 <body>
     <h1 class="text-center">The color of sound</h1>
     <hr>
+    <form>
+        <fieldset>
+            <legend> control panel </legend>
+        </fieldset>
+    </form>
 
 <script>
 window.addEventListener('keydown', function(event) {
     let Pressed = event.key;
-    print(Pressed);
+    console.log(Pressed);
 })
 </script>
 </body>
