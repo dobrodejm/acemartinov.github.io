@@ -28,16 +28,24 @@
         <div class="list-group" id="list-tab" role="tablist">
             <a class="list-group-item list-group-item-action active" id="list-volume" data-toggle="list" href="#volume">Volume control</a>
             <a class="list-group-item list-group-item-action" id="list-pitch" data-toggle="list" href="#pitch">Pitch control</a>
-        </div>
-        
+            <a class="list-group-item list-group-item-action" id="list-freq" data-toggle="list" href="#freq">Frequency control</a>
+        </div> 
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="volume"> <input type="range" class="mt-3" id="volume-slider" min="0" max="100" value="25" step="1"> </div>
+            <div class="tab-pane fade show active shadow p-2 bg-white rounded" id="volume"> <input type="range" class="mt-3 form-control-range" id="volume-slider" min="0" max="100" value="25" step="1"> Adjust the volume of the sound. </div>
             <div class="tab-pane fade" id="pitch">
-                <!--  add pitch controls here -->
+                 add pitch controls here
+            </div>
+            <div class="tab-pane fade" id="freq">
+                     add freq controls here
             </div>
         </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-2">
+        <button class="btn btn-warning rounded mt-3 p-2 text-center text-dark d-block" id="press2hide">choose pitch OR freq</button>
     </div>
     </div>
 </div>
@@ -47,6 +55,13 @@
 
 
 <script>
+let hide = document.getElementById("press2hide");
+hide.addEventListener('click', function() {
+    
+    this.classList.remove('d-block');
+    this.classList.add('fade');
+    this.classList.add('d-none');
+})
 window.addEventListener('keydown', function(event) {
     let Pressed = event.key;
     console.log(Pressed);
