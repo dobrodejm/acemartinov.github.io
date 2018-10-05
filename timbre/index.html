@@ -10,26 +10,59 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>Timbre</title>
     <style>
-    body {background-color: #f9f9f9; color: #333;}
-    form {background-color: #b7eeff;}
+    body {background-color:white; color: #333;}
+    
     </style>
 </head>
 <body>
-    <h1 class="text-center">The color of sound</h1>
-    <hr>
-    <div class="container-fluid">
-        <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Show panel </button>
-        <div class="collapse mt-2" id="collapseExample">
-            <div class="card card-body">
-                <span>Show control panel</span>
+
+
+<h1 class="text-center">The color of sound</h1>
+<hr>
+<div class="jumbotron">
+    <h1 class="display-4">Panel controls</h1>
+    <p class="lead">Change the properties of the app</p>
+    
+    <div class="row">
+    <div class="col-2">
+        <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-volume" data-toggle="list" href="#volume">Volume control</a>
+            <a class="list-group-item list-group-item-action" id="list-pitch" data-toggle="list" href="#pitch">Pitch control</a>
+        </div>
+        
+    </div>
+    <div class="col-4">
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="volume"> <input type="range" class="mt-3" id="volume-slider" min="0" max="100" value="25" step="1"> </div>
+            <div class="tab-pane fade" id="pitch">
+                <!--  add pitch controls here -->
             </div>
+        </div>
+    </div>
     </div>
 </div>
+
+
+
+
+
 <script>
 window.addEventListener('keydown', function(event) {
     let Pressed = event.key;
     console.log(Pressed);
-})
+ })
+// let switch1 = document.getElementById('switch1');
+// switch1.addEventListener('click', function() {
+
+// })
+const REAL_TIME_FREQUENCY = 440;
+let audioContext = new AudioContext();
+
+let myOscillator = audioContext.createOscillator();
+myOscillator.frequency.value = REAL_TIME_FREQUENCY;
+
+myOscillator.connect(audioContext.destination);
+
 </script>
 </body>
 </html>
