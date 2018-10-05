@@ -39,7 +39,7 @@
             </div>
             <div class="tab-pane fade" id="freq">
                     <div class="input-group-append">
-                     <input type="text" class="form-control" placeholder="20-20,000">
+                     <input type="text" id="user_freq" class="form-control" placeholder="20-20,000">
                     <span class="input-group-text">Hz</span>
                 </div>
                 <button type="button" class="btn btn-primary mt-2" id="apply">Apply</button>
@@ -52,7 +52,7 @@
     </div>
     <div class="row">
     <div class="col-2">
-        <button class="btn btn-warning rounded mt-3 form-control text-center text-dark" id="press2hide">choose pitch OR freq</button>
+        <button class="btn btn-warning rounded mt-3 text-center text-dark" id="press2hide">choose pitch OR freq</button>
     </div>
     </div>
 </div>
@@ -62,25 +62,28 @@
 
 
 <script>
-let apply = document.getElementById("apply");
+//variables
+let apply = document.getElementById("apply"); // the actual project thing that does the sound
+let hide = document.getElementById("press2hide"); // hides the random yellow button pitch or freq
+let user_freq = document.getElementById("user_freq").value;
+
+let REAL_TIME_FREQUENCY = 0;
+let audioContext = new AudioContext();
+let myOscillator = audioContext.createOscillator();
+myOscillator.frequency.value = REAL_TIME_FREQUENCY;
+myOscillator.connect(audioContext.destination);
+
 apply.addEventListener('click', function() {
-
+    REAL_TIME_FREQUENCY = user_freq;
+    myOscillator.start();
+    myOscillator.stop(0.2);
 })
-
-let hide = document.getElementById("press2hide");
 hide.addEventListener('click', function() {
     this.classList.add('d-none');
 })
 
-let REAL_TIME_FREQUENCY = ;
-let audioContext = new AudioContext();
 
-let myOscillator = audioContext.createOscillator();
-myOscillator.frequency.value = REAL_TIME_FREQUENCY;
 
-myOscillator.connect(audioContext.destination);
-myOscillator.start();
-myOscillator.stop(0.2);
 </script>
 </body>
 </html>
