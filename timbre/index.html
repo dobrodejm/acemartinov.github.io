@@ -9,10 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <title>Timbre</title>
-    <style>
-    body {background-color:white; color: #333;}
+    <style>body {background-color:white; color: #333;}</style>
     
-    </style>
 </head>
 <body>
 
@@ -22,68 +20,54 @@
 <div class="jumbotron">
     <h1 class="display-4">Panel controls</h1>
     <p class="lead">Change the properties of the app</p>
-    
+    <!-- Main row -->
     <div class="row">
     <div class="col-2">
+        <!-- Tab menu -->
         <div class="list-group" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active" id="list-volume" data-toggle="list" href="#volume">Volume control</a>
-            <a class="list-group-item list-group-item-action" id="list-pitch" data-toggle="list" href="#pitch">Pitch control</a>
+            <a class="list-group-item list-group-item-action active" id="list-volume" data-toggle="list" href="#volume">Audio control</a>
+            <a class="list-group-item list-group-item-action" id="list-pitch" data-toggle="list" href="#pitch">Waveform control</a>
             <a class="list-group-item list-group-item-action" id="list-freq" data-toggle="list" href="#freq">Frequency control</a>
         </div> 
     </div>
     <div class="col-3">
+        <!-- Tab content -->
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active shadow p-2 bg-white rounded" id="volume"> <input type="range" class="mt-3 form-control-range" id="volume-slider" min="0" max="100" value="25" step="1"> Adjust the volume of the sound. </div>
-            <div class="tab-pane fade" id="pitch">
-                 add pitch controls here
+            <!-- add audio controls here -->
+            <div class="tab-pane fade show active shadow p-2 bg-white rounded" id="volume"> <input type="range" class="mt-3 form-control-range" id="user_volume" min="0.1" max="1" value="25" step="0.1"> Adjust the volume of the sound. </div>
+
+            <div class="tab-pane fade shadow p-2 bg-white rounded" id="pitch">
+                 <!-- add pitch controls here -->
+                 <select id="user_waveform" class="form-control-range p-3">
+                     <option value="sine">Sine</option>
+                     <option value="square">Square</option>
+                     <option value="triangle">Triangle</option>
+                     <option value="sawtooth">Sawtooth</option>
+                 </select>
+                                    
             </div>
             <div class="tab-pane fade" id="freq">
+                    <!-- add freq controls here -->
                     <div class="input-group-append">
                      <input type="text" id="user_freq" class="form-control" placeholder="20-20,000">
                     <span class="input-group-text">Hz</span>
                 </div>
-                <button type="button" class="btn btn-primary mt-2" id="apply">Apply</button>
+                
             </div>
         </div>
     </div>
     <div class="col-7 bg-warning p-3 rounded">
-        The player
+            <button type="button" class="btn btn-primary mt-2" id="apply">Apply</button>
+            <p> * or press the <ENTER\> key!></p>
+        
     </div>
     </div>
     <div class="row">
     <div class="col-2">
-        <button class="btn btn-warning rounded mt-3 text-center text-dark" id="press2hide">choose pitch OR freq</button>
+        
     </div>
     </div>
 </div>
-
-
-
-
-
-<script>
-//variables
-let apply = document.getElementById("apply"); // the actual project thing that does the sound
-let hide = document.getElementById("press2hide"); // hides the random yellow button pitch or freq
-let user_freq = document.getElementById("user_freq").value;
-
-let REAL_TIME_FREQUENCY = 0;
-let audioContext = new AudioContext();
-let myOscillator = audioContext.createOscillator();
-myOscillator.frequency.value = REAL_TIME_FREQUENCY;
-myOscillator.connect(audioContext.destination);
-
-apply.addEventListener('click', function() {
-    REAL_TIME_FREQUENCY = user_freq;
-    myOscillator.start();
-    myOscillator.stop(0.2);
-})
-hide.addEventListener('click', function() {
-    this.classList.add('d-none');
-})
-
-
-
-</script>
+<script src="sound.js"></script>
 </body>
 </html>
