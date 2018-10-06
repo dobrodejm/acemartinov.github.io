@@ -1,9 +1,9 @@
 
 //variables
-let apply = document.getElementById("apply"); // the actual project thing that does the sound
+var apply = document.getElementById("apply"); // the actual project thing that does the sound
 //these two are here for the whole thing to start up
-let user_volume = document.getElementById("user_volume").value;
-let user_wave = document.getElementById("user_waveform").value;
+var user_volume = document.getElementById("user_volume").value;
+var user_wave = document.getElementById("user_waveform").value;
 
 // make sure user input is updated
 document.getElementById("user_volume").addEventListener('change', function() {
@@ -44,12 +44,7 @@ class Sound {
     }
 }
 
-
-
-apply.addEventListener('click', playsound());
-
 document.addEventListener("keydown", keyDownTextField, false);
-
 function keyDownTextField(e) {
     var keyCode = e.keyCode;
     if(keyCode==13) {
