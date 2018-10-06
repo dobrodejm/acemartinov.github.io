@@ -15,6 +15,9 @@ document.getElementById("user_waveform").addEventListener('change', function() {
     user_wave = this.value;
     console.log(user_wave);
 })
+document.getElementById("list-volume").addEventListener('click', function() {
+    alert("Volume control is currently out of order. Please use your system volume slider.")
+})
 
 
 class Sound {
@@ -26,7 +29,7 @@ class Sound {
         this.gainNode = this.context.createGain();
 
         this.oscillator.connect(this.gainNode);
-        this.gainNode.gain.value = parseInt(user_volume);
+        this.gainNode.gain.value = user_volume*100;
         this.gainNode.connect(this.context.destination);
         this.oscillator.type = user_wave;
     }
