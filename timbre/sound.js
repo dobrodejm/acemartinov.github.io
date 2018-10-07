@@ -20,17 +20,27 @@ chords : ["C","C#","D","Eb","E","F","F#","G","G#","A","Bb","B"]
 }
 var table = document.getElementById('t-notes');
 for (let i = 0; i < 9; i++) {
+    if (i==0) {
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+        for(let x = 0; x < 13; x++) {
+        let td = document.createElement('td');
+        tr.appendChild(td);
+        td.innerHTML = "ddd";
+        }    
+    }
     let tr = document.createElement('tr');
     table.appendChild(tr);
     tr.id = 'oct'+i;
+    let td = document.createElement('td');
+    tr.appendChild(td);
+    td.innerHTML = "<b>"+"octave&nbsp;"+(i+1)+"</b>";
     for (j = 0; j < 12; j++) {
         let td = document.createElement('td');
         tr.appendChild(td);
         td.id = "note"+j;
         td.innerHTML = Object.values(notes)[i][j];
-
     }
-    console.log("printed tr");
 }
 
 
