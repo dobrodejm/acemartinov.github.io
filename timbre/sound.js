@@ -16,6 +16,22 @@ oct7 : [2093,2217,2349,2489,2637,2794,2960,3136,3322,3520,3729,3951],
 oct8 : [4186,4435,4699,4978,5274,5588,5920,6272,6645,7040,7459,7902]
 }
 
+var table = document.getElementById('t-notes');
+for (let key in notes) {
+    let tr = document.createElement('tr');
+    table.appendChild(tr);
+    tr.id = key;
+    for (j = 0; j < 13; j++) {
+        let td = document.createElement('td');
+        tr.appendChild(td);
+        td.id = "note"+j;
+        td.innerHTML += Object.values(notes)[key][j];
+
+    }
+    console.log("printed tr");
+}
+
+
 // make sure user input is updated
 document.getElementById("user_volume").addEventListener('change', function() {
     user_volume = this.value;
