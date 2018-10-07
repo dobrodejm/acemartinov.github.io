@@ -26,10 +26,13 @@ for (let i = 0; i < 9; i++) {
     if (i==0) {
         let tr = document.createElement('tr');
         table.appendChild(tr);
-        for(let x = 0; x < 13; x++) {
+        for(let x = 0; x < 12; x++) {
+            //a retarded solution of aligning the notes
+            if (x<1) {let td = document.createElement('td');tr.appendChild(td);}
+            //inserting the note names
             let td = document.createElement('td');
             tr.appendChild(td);
-            td.innerHTML = "ddd";
+            td.innerHTML = Object.values(notes_help)[i][x];
             }    
     }
     // 2nd time the loop goes on as normal, making the rows
