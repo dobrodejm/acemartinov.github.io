@@ -3,7 +3,7 @@ var apply = document.getElementById("apply"); // the actual project thing that d
 //these two are here for the whole thing to start up
 var user_volume = document.getElementById("user_volume").value;
 var user_wave = document.getElementById("user_waveform").value;
-//note arrays
+//an object with 9 octaves which contain the frequencies of like all major notes or something
 var notes = {
 oct0 : [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87],
 oct1 : [32.70,34.65,36.71,38.89,41.20,43.65,46.25,490,51.91,550,58.27,61.74],
@@ -15,26 +15,32 @@ oct6 : [1047,1109,1175,1245,1319,1397,1480,1568,1661,1760,1865,1976],
 oct7 : [2093,2217,2349,2489,2637,2794,2960,3136,3322,3520,3729,3951],
 oct8 : [4186,4435,4699,4978,5274,5588,5920,6272,6645,7040,7459,7902]
 }
+// just for labeling the table
 var notes_help = {
 chords : ["C","C#","D","Eb","E","F","F#","G","G#","A","Bb","B"]
 }
+// this generates the table
 var table = document.getElementById('t-notes');
 for (let i = 0; i < 9; i++) {
+    // if running the first time, mark the notes
     if (i==0) {
         let tr = document.createElement('tr');
         table.appendChild(tr);
         for(let x = 0; x < 13; x++) {
-        let td = document.createElement('td');
-        tr.appendChild(td);
-        td.innerHTML = "ddd";
-        }    
+            let td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerHTML = "ddd";
+            }    
     }
+    // 2nd time the loop goes on as normal, making the rows
     let tr = document.createElement('tr');
     table.appendChild(tr);
     tr.id = 'oct'+i;
     let td = document.createElement('td');
     tr.appendChild(td);
+    // makes the ordering
     td.innerHTML = "<b>"+"octave&nbsp;"+(i+1)+"</b>";
+    //and populating the rows
     for (j = 0; j < 12; j++) {
         let td = document.createElement('td');
         tr.appendChild(td);
@@ -49,16 +55,12 @@ document.getElementById("user_volume").addEventListener('change', function() {
     user_volume = this.value;
     console.log(user_volume);
 })
-
+// gets the waveform selected by the user
 document.getElementById("user_waveform").addEventListener('change', function() {
     user_wave = this.value;
     console.log(user_wave);
 })
-// document.getElementById("list-volume").addEventListener('click', function() {
-//     alert("Volume control is currently out of order. Please use your system volume slider.")
-// })
-
-
+// main sound 'engine'
 class Sound {
     constructor(context) {
         this.context = context;
@@ -87,7 +89,7 @@ class Sound {
         this.oscillator.stop(time + 1);
     }
 }
-
+// pressing enter makes a sound
 document.addEventListener("keydown", keyDownTextField, false);
 function keyDownTextField(e) {
     var keyCode = e.keyCode;
@@ -97,6 +99,7 @@ function keyDownTextField(e) {
         return;
     }
 }
+// using the sound engine, this plays sound
 function playsound() {
 // get user input
 let user_freq = document.getElementById("user_freq").value;
