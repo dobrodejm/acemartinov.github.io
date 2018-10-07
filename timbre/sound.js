@@ -15,9 +15,9 @@ document.getElementById("user_waveform").addEventListener('change', function() {
     user_wave = this.value;
     console.log(user_wave);
 })
-document.getElementById("list-volume").addEventListener('click', function() {
-    alert("Volume control is currently out of order. Please use your system volume slider.")
-})
+// document.getElementById("list-volume").addEventListener('click', function() {
+//     alert("Volume control is currently out of order. Please use your system volume slider.")
+// })
 
 
 class Sound {
@@ -29,14 +29,16 @@ class Sound {
         this.gainNode = this.context.createGain();
 
         this.oscillator.connect(this.gainNode);
-        this.gainNode.gain.value = user_volume*100;
+        // this gain.value thing doesn't actually control the volume WTF?!
+        this.gainNode.gain.value = 0.1;
         this.gainNode.connect(this.context.destination);
         this.oscillator.type = user_wave;
     }
     play(value,time) {
         this.init();
         this.oscillator.frequency.value = value;
-        this.gainNode.gain.setValueAtTime(1, this.context.currentTime);
+        // instead this weird ass method does ?!?!?!? 
+        this.gainNode.gain.setValueAtTime(user_volume, this.context.currentTime);
 
         this.oscillator.start(time);
         this.stop(time);
