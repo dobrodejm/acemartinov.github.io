@@ -15,6 +15,8 @@ oct6 : [1047,1109,1175,1245,1319,1397,1480,1568,1661,1760,1865,1976],
 oct7 : [2093,2217,2349,2489,2637,2794,2960,3136,3322,3520,3729,3951],
 oct8 : [4186,4435,4699,4978,5274,5588,5920,6272,6645,7040,7459,7902]
 }
+//just for helping the playsound() find the nearest freq
+var ranges = [30.87, 61.74, 123.5, 246.9, 493.9, 987.8, 1976, 3951, 7902];
 // just for labeling the table
 var notes_help = {
 chords : ["C","C#","D","Eb","E","F","F#","G","G#","A","Bb","B"]
@@ -32,7 +34,7 @@ for (let i = 0; i < 9; i++) {
             //inserting the note names
             let td = document.createElement('td');
             tr.appendChild(td);
-            td.innerHTML = Object.values(notes_help)[i][x];
+            td.innerHTML = "<b>"+Object.values(notes_help)[i][x]+"</b>";
             }    
     }
     // 2nd time the loop goes on as normal, making the rows
@@ -42,7 +44,7 @@ for (let i = 0; i < 9; i++) {
     let td = document.createElement('td');
     tr.appendChild(td);
     // makes the ordering
-    td.innerHTML = "<b>"+"octave&nbsp;"+(i+1)+"</b>";
+    td.innerHTML = "<b>"+"octave&nbsp;"+(i)+"</b>";
     //and populating the rows
     for (j = 0; j < 12; j++) {
         let td = document.createElement('td');
@@ -106,6 +108,30 @@ function keyDownTextField(e) {
 function playsound() {
 // get user input
 let user_freq = document.getElementById("user_freq").value;
+// lil shit that figures out which frequency is closest
+// starts by figuring out which octave the thing is in 
+let smallestDifference = Math.abs(user_freq, ranges[0]);
+closest = 0;
+for(let i=1; i <ranges.length; i++) {
+    currentDiff = Math.abs(user_freq - ranges[i]);
+    if (currentDiff < smallestDifference) {
+        smallestDifference = currentDiff;
+        closest = i;
+    }
+}
+let closer = ranges[closest];
+console.log(closest);
+
+// Object.values(notes)[closest]
+for(let i=1; i <Object.values(notes)[closest].length; i++) {
+    currentDiff = Math.abs(user_freq - Object.values(notes)[closest][i]);
+    if (currentDiff < smallestDifference) {
+        smallestDifference = currentDiff;
+        closest2 = i;
+    }
+}
+let closer2 = Object.values(notes)[closest2][closer2];
+console.log(closest2, closer2);
 
 let user_wave = document.getElementById("user_waveform").value;
 // make noise
