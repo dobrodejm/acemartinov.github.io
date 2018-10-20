@@ -5,7 +5,7 @@ var user_volume = document.getElementById("user_volume").value;
 var user_wave = document.getElementById("user_waveform").value;
 //an object with 9 octaves which contain the frequencies of like all major notes or something
 var notes = {
-oct0 : [16.35,17.32,18.35,19.45,20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87],
+oct0 : [16.35,17.32,18.35,19.45, 20.60,21.83,23.12,24.50,25.96,27.50,29.14,30.87],
 oct1 : [32.70,34.65,36.71,38.89,41.20,43.65,46.25,490,51.91,550,58.27,61.74],
 oct2 : [65.41,69.30,73.42,77.78,82.41,87.31,92.50,980,103.8,110,116.5,123.5],
 oct3 : [130.8,138.6,146.8,155.6,164.8,174.6,185,196,207.7,220,233.1,246.9],
@@ -105,9 +105,14 @@ function keyDownTextField(e) {
     }
 }
 // using the sound engine, this plays sound
-function playsound() {
+
+
+
+
+
+function playsound(a,b) {
 // get user input
-let user_freq = document.getElementById("user_freq").value;
+le
 // lil shit that figures out which frequency is closest
 // starts by figuring out which octave the thing is in 
 let smallestDifference = Math.abs(user_freq, ranges[0]);
@@ -123,15 +128,15 @@ let closer = ranges[closest];
 console.log(closest);
 
 // Object.values(notes)[closest]
-for(let i=1; i <Object.values(notes)[closest].length; i++) {
-    currentDiff = Math.abs(user_freq - Object.values(notes)[closest][i]);
-    if (currentDiff < smallestDifference) {
-        smallestDifference = currentDiff;
-        closest2 = i;
-    }
-}
-let closer2 = Object.values(notes)[closest2][closer2];
-console.log(closest2, closer2);
+// for(let i=1; i <Object.values(notes)[closest].length; i++) {
+//     currentDiff = Math.abs(user_freq - Object.values(notes)[closest][i]);
+//     if (currentDiff < smallestDifference) {
+//         smallestDifference = currentDiff;
+//         closest2 = i;
+//     }
+// }
+// let closer2 = Object.values(notes)[closest2][closer2];
+// console.log(closest2, closer2);
 
 let user_wave = document.getElementById("user_waveform").value;
 // make noise
