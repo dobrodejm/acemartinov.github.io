@@ -112,20 +112,20 @@ function keyDownTextField(e) {
 
 function playsound(a,b) {
 // get user input
-le
+
 // lil shit that figures out which frequency is closest
 // starts by figuring out which octave the thing is in 
-let smallestDifference = Math.abs(user_freq, ranges[0]);
-closest = 0;
-for(let i=1; i <ranges.length; i++) {
-    currentDiff = Math.abs(user_freq - ranges[i]);
-    if (currentDiff < smallestDifference) {
-        smallestDifference = currentDiff;
-        closest = i;
-    }
-}
-let closer = ranges[closest];
-console.log(closest);
+// let smallestDifference = Math.abs(user_freq, ranges[0]);
+// closest = 0;
+// for(let i=1; i <ranges.length; i++) {
+//     currentDiff = Math.abs(user_freq - ranges[i]);
+//     if (currentDiff < smallestDifference) {
+//         smallestDifference = currentDiff;
+//         closest = i;
+//     }
+// }
+// let closer = ranges[closest];
+// console.log(closest);
 
 // Object.values(notes)[closest]
 // for(let i=1; i <Object.values(notes)[closest].length; i++) {
@@ -143,5 +143,6 @@ let user_wave = document.getElementById("user_waveform").value;
 let context = new (window.AudioContext || window.webkitAudioContext)();
 let note = new Sound(context);
 let now = context.currentTime;
-note.play(user_freq,now);    
+
+note.play(user_freq,now);
 }
