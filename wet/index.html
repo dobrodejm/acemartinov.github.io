@@ -37,20 +37,7 @@
         <span class="right"> <a href="https://facebook.com/mdobrodej">facebook</a><a href="mailto:dobrodejm@gmail.com"> email</a></span>
     </footer>
     <script>    
-function combinations(str) {
-    var fn = function(active, rest, a) {
-        if (!active && !rest)
-            return;
-        if (!rest) {
-            a.push(active);
-        } else {
-            fn(active + rest[0], rest.slice(1), a);
-            fn(active, rest.slice(1), a);
-        }
-        return a;
-    }
-    return fn("", str, []);
-}
+
     </script>
     <!-- 
         nabuduce:
