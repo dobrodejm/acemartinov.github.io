@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>wetko</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+    <div id="head">
+        <div id="h1">
+            <span>test</span>
+        </div>
+        <div id="h2" class="right">
+            <span>test2</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Headline</h1>
+        <p id="content-1-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, impedit.</p>
+        <img src="Lasica.jpg">
+        <div id="soy"></div>
+    </div>
+
+    <div class="content" id="con-2">
+        <h1>Headline2</h1>
+        <p id="content-2-text" style="text-align:justify;">Okay this is epic Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste cupiditate nulla, ipsum tempore doloribus incidunt est excepturi officiis id vel dolore eos quo, iusto quam tenetur rem ratione voluptatem expedita!</p>
+    </div>
+    <div id="bg2">
+
+    </div>
+    <footer>
+        <span>Túto stránku urobil Dobrodej gang</span>
+        <span class="right"> <a href="https://facebook.com/mdobrodej">facebook</a><a href="mailto:dobrodejm@gmail.com"> email</a></span>
+    </footer>
+    <script>    
+function combinations(str) {
+    var fn = function(active, rest, a) {
+        if (!active && !rest)
+            return;
+        if (!rest) {
+            a.push(active);
+        } else {
+            fn(active + rest[0], rest.slice(1), a);
+            fn(active, rest.slice(1), a);
+        }
+        return a;
+    }
+    return fn("", str, []);
+}
+    </script>
+    <!-- 
+        nabuduce:
+        >JS scroll ktory zmeni pozadie ked prejdes za macky
+        >scrollY je var ktory udrzuje ako daleko si dosiel od zaciatku (top stranky je 0)
+        >zistis window vs document v purejs
+        
+     -->
+</body>
+</html>
