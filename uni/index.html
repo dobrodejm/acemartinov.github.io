@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="users">
+        <input type="text" class="search">
+        <button class="sort" data-sort="name">
+            Sort
+        </button>
+        <ul class="list">
+                <li>
+                      <h3 class="name">Jonny Stromberg</h3>
+                      <p class="born">1986</p>
+                    </li>
+                  </ul>
+                
+                </div>
+  
+<script>
+var options = {
+  valueNames: [ 'odbor', 'mesto', 'skola' ]
+};
+
+// These items will be added to the list on initialization.
+var values = [
+  {
+    odbor: "Compsci",
+    mesto : "Aalborg",
+    skola : "UCN"
+
+  },
+  {
+    odbor: "DataScience",
+    mesto : "Aalborg",
+    skola : "UCN"
+  }
+];
+
+var userList = new List('example-list', options, values);
+
+// It's possible to add items after list been initiated
+userList.add({
+  name: 'Gustaf Lindqvist',
+  born: 1983
+});
+
+</script>
+</body>
+</html>
