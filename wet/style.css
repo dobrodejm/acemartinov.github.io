@@ -1,67 +1,18 @@
 body {
     margin: 0;
-    color: #333;
-    background: url("Lasica.jpg"); background-repeat: no-repeat; background-size: 200%; background-attachment: fixed;
-    
+    font-family: sans-serif;
 }
-/*   sample colors
-red  #d45151
-blu  #5169d4
-*/   
-.right {
-    float:right;
-    display: inline;
+header {
+    background-color: orange;
+    height: 7vh;
+    font-size: 2em;
 }
-                                                        /* HEADER */
-#head {
-    height: 11.5vh;
-    background-color: #d45151;
-}
-#h1 {
-    font-size: 4em;
-    margin-left: 0.5em;
-    display: inline;
-}
-#h2 {
-    font-size: 4em;
-    margin-right: 0.5em;
-}
-                                                        /* CONTENT */
-                                                
-.content {
-    width: 40vw;
-    margin: 0 20vw;
-    background-color: #ffffffaa;
-    font-weight: bold;
-    padding: 0 5em;    
-} 
-.content img {
-    width: 50%;
-    margin: 0 25%;
-}
-#context-1-long {
-    text-align: justify;
-    width: 80%;
-    margin: 0 10%;
-}
-#bg2 {
-    background-image: url("chonky.jpg");
-    background-size: 50%;
-    width: 100%;
-    height: 50em;
-}
+#a {background-color: yellow; height: 15vh;}
+#b {background-color: orange; height: 5vh;}
+#c {background-color: red; height: 10vh; margin-top: 2vh;}
+#d {background-color: lime; height: 10vh; margin-top: 2vh;}
 
-                                                        /* FOOTER */
-footer {
-    width: 100%;
-    bottom: 0;
-    background-color: #333333dd;
-    color: #f9f9f9;
-    font-family: Verdana;
-    margin-top: 2em;
-    padding: 0.3em 0;
+.moj {
+    padding-top: 50px;
 }
-footer a {
-    text-decoration: none;
-    color: #ffaaaa;
-}
+/* nejake !important picoviny; inline veci riesit; ktore sa ma kedy vypnita */
