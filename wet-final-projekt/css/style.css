@@ -1,0 +1,15 @@
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  #peko {
+      border-radius: 100%;
+      border: white solid 3px;
+      width: 30%;
+  }
