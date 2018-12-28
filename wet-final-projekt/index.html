@@ -14,12 +14,28 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Team Fortress 2</title>
 </head>
+<!-- 
+    Zriesit pozadie este, pozadie.jpg; daky introduction, tie karty vyuzit ako zdroj informacii.
+       
+-->
 <body>
-    <header class="blue-grey white-text center-align">
+    <header class="red accent-2 white-text center-align">
         <h5>Tu je nejaky fixny header</h5>
 
     </header>
     <main>
+        <div class="parallax-container">
+            <div class="parallax"><img src="img/paral2.jpg"></div>
+        </div>
+        <div class="section grey">
+            <div class="row container">
+                <div class="col s12 m10 offset-m1"> 
+                    <h2 class="header">Team Fortress 2 </h2>
+                    <p class="white-text">TF2 is already 11 years old. It started as a mod for Half life 2 and Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, magni? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, doloremque repudiandae? Ut, illum! Sed eligendi ullam inventore? Reprehenderit, architecto autem!</p>
+                </div>
+            </div>
+
+
         <div class="container">
         <div class="row">
             <!-- Card begins here -->
@@ -55,7 +71,7 @@
                 </div>
         </div>
         </div>
-
+    </div>
 
     </main>
     <footer class='page-footer'>
@@ -71,5 +87,14 @@
     </footer>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.parallax').parallax();
+
+    });
+
+</script>
 </body>
 </html>
