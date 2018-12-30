@@ -20,16 +20,22 @@
 -->
 <body>
     
-    <nav class="hide-on-med-and-down">
+    <nav>
         <div class="nav-wrapper">
-            
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Hlavna stranka</a></li>
+            <a href="#" class="brand-logo center">Mikuláš Dobrodej</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="#"><i class="material-icons">home</i></a></li>
                 <li><a href="html/pod1.html">Podstranka c. 1</a></li>
                 <li><a href="html/pod2.html">Podstranka c. 2</a></li>
             </ul>
         </div>
     </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Hlavna stranka</a></li>
+        <li><a href="html/pod1.html">Podstranka c. 1</a></li>
+        <li><a href="html/pod2.html">Podstranka c. 2</a></li>
+    </ul>
     
     <main>
         <div class="parallax-container">
@@ -105,7 +111,7 @@
 <script>
     $(document).ready(function(){
     $('.parallax').parallax();
-    $('.modal').modal();
+    $('.sidenav').sidenav();
     });
 
     // Pause the iframe when closing out of the modal
