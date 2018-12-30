@@ -14,9 +14,21 @@ main {
 }
 .parallax{
   position:static;
-  background-size: cover;
+}
+.parallax img {
+  width: 101%;
 }
 
 #main-header {
   color: #B8383B;
+}
+@media only screen and (max-width: 600px) {
+  .parallax-container {
+      height: 150px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .parallax-container {
+      height: 300px;
+  }
 }
