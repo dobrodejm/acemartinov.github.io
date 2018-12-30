@@ -27,7 +27,7 @@ main {
       height: 150px;
   }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1081px) {
   .parallax-container {
       height: 300px;
   }
