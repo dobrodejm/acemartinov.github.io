@@ -20,18 +20,20 @@
 -->
 <body>
     <header class="red accent-2 white-text center-align">
-        <h5>Tu je nejaky fixny header</h5>
+        
 
     </header>
     <main>
         <div class="parallax-container">
-            <div class="parallax"><img src="img/paral2.jpg"></div>
+            <div class="parallax"><img src="img/wallpaper-main.jpg"></div>
         </div>
-        <div class="section grey">
+        <div class="section grey darken-4">
             <div class="row container">
                 <div class="col s12 m10 offset-m1"> 
-                    <h2 class="header">Team Fortress 2 </h2>
-                    <p class="white-text">TF2 is already 11 years old. It started as a mod for Half life 2 and Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, magni? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, doloremque repudiandae? Ut, illum! Sed eligendi ullam inventore? Reprehenderit, architecto autem!</p>
+                    <h2 class="header" id="main-header">Team Fortress 2 </h2> <hr />
+                    <p class="grey-text text-lighten-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident ex quo modi iusto ducimus harum doloremque? Impedit corporis suscipit labore ipsum quam at quos voluptas iusto aperiam consequuntur non optio alias quis repudiandae dolores aspernatur eveniet quia, provident quae sunt omnis laudantium. Nisi eius magni vero tempore doloremque, iusto reprehenderit veritatis amet soluta repellendus dicta ratione! Facere numquam cum non! Assumenda quibusdam sequi magni dolores, ratione ducimus blanditiis commodi optio nisi voluptas, velit beatae natus nobis earum, saepe dolorem. Ipsam repellat sint ullam alias odio, ut molestias sit mollitia quam quasi, quod animi, quia minima similique consectetur reiciendis voluptatem!
+
+                    </p>
                 </div>
             </div>
 
@@ -41,60 +43,79 @@
             <!-- Card begins here -->
             <div class="col m6 l6">
                 <div class="card blue darken-1">
+                    <div class="card-image">
+                        <img src="img/scout-eating.jpg" alt="The game's release trailer">
+                    </div>
                     <div class="card-content white-text">
-                        <span class="card-title"> Card title</span>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias magni dolorum culpa, sit ipsam itaque expedita veritatis ex. Repellat culpa incidunt provident placeat exercitationem quam vel enim sed dolores.</p>
+                        <span class="card-title"> Meet one of the classes</span>
+                        <p>Watch a short video to get a feel for the art style, comedy and dynamics of the game.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">This is a link</a>
-                        <a href="#">This is a link</a>
+                        <a class="waves-effect btn modal-trigger red" href="#modal1">Modal</a>
+                        <div id="modal1" class="modal grey darken-4">
+                                <div class="modal-content center-align">
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/geNMz0J9TEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="modal-footer grey darken-4">
+                                  <a href="#!" class="modal-close waves-effect waves-green btn-flat red white-text close-all-iframes">CLOSE</a>
+                                </div>
+                              </div>
                     </div>
                 </div>
             </div>
             <!-- Card ends here -->
-        </div>
-        <div class="row">
-            <div class="col m3 l4">
-                    <div class="card" id="peko-tp">
+        
+        
+            <div class="col m6 l6">
+                    <div class="card blue" id="peko-tp">
                         <div class="card-image">
-                            <img src="img/peko.png">
+                            <img src="img/class-selection-screen.jpg" alt="The game's class selection screen">
                         </div>
-                        <div class="card-content">
+                        <div class="card-content white-text">
                             <span class="card-title"> Card title</span>
                             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto molestias magni dolorum culpa, sit ipsam itaque expedita veritatis ex. Repellat culpa incidunt provident placeat exercitationem quam vel enim sed dolores.</p>
                         </div>
                         <div class="card-action">
                             <a href="#">Despacito</a>
-                            <a href="#">Daj si brko</a>
+                            
                         </div>
                     </div>
-                </div>
+            </div>
+        
         </div>
         </div>
-    </div>
+        <div class="container">
+        <div class="row">
 
+        </div>
+        </div>
+    
     </main>
     <footer class='page-footer'>
-        <div class="container">
-            <div class="row">
-                <div class="white-text center-align">
-                    <p class="col l4 s6">&copy; Mikuláš Dobrodej 2018/2019 <br> Komenského 215; Sučany.</p>
-                    <p class="col l4 s6">Webové Technológie</p>
-                    <p class="col l4 s12">Reach out at: <a href="mailto:dobrodejm@gmail.com">dobrodejm@gmail.com</a></p>
-                </div>
-            </div>
+        <div class="row center-align">
+            <div class="col s4"> &copy; Prvy link </div>
+            <div class="col s4"> &copy; Druhy link </div>
+            <div class="col s4"> &copy; Treti link </div>
         </div>
+
+
+
     </footer>
 <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/materialize.min.js"></script>
 <script>
     $(document).ready(function(){
     $('.parallax').parallax();
-
+    $('.modal').modal();
     });
 
+    // Pause the iframe when closing out of the modal
+    $(function(){
+    $('.close-all-iframes').click(function(){      
+        $('iframe').attr('src', $('iframe').attr('src'));
+    });
+    });
 </script>
 </body>
 </html>

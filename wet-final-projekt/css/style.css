@@ -16,3 +16,9 @@ main {
 .parallax{
   position:static;
 }
+.parallax img {
+  width: 101%;
+}
+#main-header {
+  color: #B8383B;
+}
