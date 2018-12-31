@@ -7,11 +7,6 @@ body {
 main {
   flex: 1 0 auto;
 }
-#peko {
-    border-radius: 100%;
-    border: white solid 3px;
-    width: 30%;
-}
 .parallax{
   position:static;
 }
@@ -19,7 +14,7 @@ main {
   width: 101%;
 }
 
-#main-header {
+.main-header {
   color: #B8383B;
 }
 @media only screen and (max-width: 600px) {
@@ -34,19 +29,19 @@ main {
 }
 #first-image {
   background: url("../img/up.jpg");
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 #second-image {
-  background: url("../img/barnblitz.jpg");
-  background-size: cover;
+  background: url("../img/hightower.png");
+  background-size: 100% 100%;
 }
 #third-image {
   background: url("../img/process.jpeg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 #fourth-image {
   background: url("../img/harvest.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
