@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Webove Technologie</title>
 </head>
-<!-- 
-    Zriesit pozadie este, pozadie.jpg; daky introduction, tie karty vyuzit ako zdroj informacii.
-       
--->
 <body>
     
     <nav>
@@ -45,7 +41,7 @@
             <div class="row container">
                 <div class="col s12 m10 offset-m1"> 
                     <h3 class="header" id="main-header">Team Fortress 2 </h3> <hr />
-                    <p class="grey-text text-lighten-5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque provident ex quo modi iusto ducimus harum doloremque? Impedit corporis suscipit labore ipsum quam at quos voluptas iusto aperiam consequuntur non optio alias quis repudiandae dolores aspernatur eveniet quia, provident quae sunt omnis laudantium. Nisi eius magni vero tempore doloremque, iusto reprehenderit veritatis amet soluta repellendus dicta ratione! Facere numquam cum non! Assumenda quibusdam sequi magni dolores, ratione ducimus blanditiis commodi optio nisi voluptas, velit beatae natus nobis earum, saepe dolorem. Ipsam repellat sint ullam alias odio, ut molestias sit mollitia quam quasi, quod animi, quia minima similique consectetur reiciendis voluptatem!
+                    <p class="grey-text text-lighten-5"> Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats! 
 
                     </p>
                 </div>
@@ -89,7 +85,28 @@
         </div>
         <div class="container">
         <div class="row">
-
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                    <a class="btn waves-effect waves-light red white-text" href="#">show map</a>
+                    <a class="btn waves-effect waves-light blue white-text" href="#">explain gamemode</a>
+                </div>
+                <div class="carousel-item white-text" href="#one!" id="first-image">
+                    <h2>Payload - Upward</h2>
+                    <p class="white-text"></p>
+                </div>
+                <div class="carousel-item amber white-text" href="#two!" id="second-image">
+                    <h2>Payload - Barnblitz</h2>
+                    <p class="white-text">This is the second panel.</p>
+                </div>
+                <div class="carousel-item green white-text" href="#three!" id="third-image">
+                    <h2>Control Point - Process</h2>
+                    <p class="white-text">This is the third panel. </p>
+                </div>
+                <div class="carousel-item blue white-text" href="#four!" id="fourth-image">
+                    <h2>King of the Hill - Harvest</h2>
+                    <p class="white-text">This is the last panel.</p>
+                </div>
+            </div>
         </div>
         </div>
     
@@ -99,9 +116,6 @@
             <div class="col s6"> &copy; Prvy link </div>
             <div class="col s6"> &copy; Druhy link </div>
         </div>
-
-
-
     </footer>
 <!-- Compiled and minified JavaScript -->
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -112,13 +126,10 @@
     $('.sidenav').sidenav();
     });
 
-    // Pause the iframe when closing out of the modal
-    $(function(){
-    $('.close-all-iframes').click(function(){      
-        $('iframe').attr('src', $('iframe').attr('src'));
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
     });
-    });
-
 </script>
 </body>
 </html>

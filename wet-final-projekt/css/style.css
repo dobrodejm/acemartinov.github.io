@@ -32,3 +32,19 @@ main {
       height: 300px;
   }
 }
+#first-image {
+  background: url("../img/up.jpg");
+  background-size: 100%;
+}
+#second-image {
+  background: url("../img/barnblitz.jpg");
+  background-size: 100%;
+}
+#third-image {
+  background: url("../img/process.jpeg");
+  background-size: 100%;
+}
+#fourth-image {
+  background: url("../img/harvest.jpg");
+  background-size: 100%;
+}
