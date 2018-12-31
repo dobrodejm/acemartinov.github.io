@@ -87,29 +87,36 @@
         <div class="row">
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
-                    <a class="btn waves-effect waves-light red white-text" href="#">show map</a>
-                    <a class="btn waves-effect waves-light blue white-text" href="#">explain gamemode</a>
+                    <a class="btn modal-trigger waves-effect waves-light red white-text" href="#" id="showmap">show map</a>
+                    <button class="btn waves-effect waves-light blue white-text" href="#" id="explaingame">explain gamemode</button>
                 </div>
                 <div class="carousel-item white-text" href="#one!" id="first-image">
-                    <h2>Payload - Upward</h2>
-                    <p class="white-text"></p>
+                    <h2 class="btn red noselect">Payload - Upward</h2>
+                
                 </div>
                 <div class="carousel-item amber white-text" href="#two!" id="second-image">
-                    <h2>Payload - Barnblitz</h2>
-                    <p class="white-text">This is the second panel.</p>
+                    <h2 class="btn red noselect">Payload - Barnblitz</h2>
+                    
                 </div>
                 <div class="carousel-item green white-text" href="#three!" id="third-image">
-                    <h2>Control Point - Process</h2>
-                    <p class="white-text">This is the third panel. </p>
+                    <h2 class="btn red noselect">Control Point - Process</h2>
+                    
                 </div>
                 <div class="carousel-item blue white-text" href="#four!" id="fourth-image">
-                    <h2>King of the Hill - Harvest</h2>
-                    <p class="white-text">This is the last panel.</p>
+                    <h2 class="btn red noselect">King of the Hill - Harvest</h2>
+                    
                 </div>
             </div>
         </div>
         </div>
-    
+    <!-- MODAL STORAGE -->
+    <div class="modal" id="modal1">
+        <h2></h2>
+    </div>
+    <div class="modal" id="modal2">   </div>
+    <div class="modal" id="modal3">   </div>
+    <div class="modal" id="modal4">   </div>
+
     </main>
     <footer class='grey darken-4 page-footer'>
         <div class="row center-align">
@@ -124,11 +131,17 @@
     $(document).ready(function(){
     $('.parallax').parallax();
     $('.sidenav').sidenav();
+    $('.modal').modal();
     });
 
     $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true
+    indicators: true,
+    onCycleTo: function(ele) {
+        console.log($(ele).index());
+        $('#explaingame').attr('data-target','modal'+$(ele).index());
+        $('#showmap').attr('href',''+$(ele).index());
+    }
     });
 </script>
 </body>

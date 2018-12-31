@@ -34,17 +34,26 @@ main {
 }
 #first-image {
   background: url("../img/up.jpg");
-  background-size: 100%;
+  background-size: 100% auto;
 }
 #second-image {
   background: url("../img/barnblitz.jpg");
-  background-size: 100%;
+  background-size: cover;
 }
 #third-image {
   background: url("../img/process.jpeg");
-  background-size: 100%;
+  background-size: cover;
 }
 #fourth-image {
   background: url("../img/harvest.jpg");
-  background-size: 100%;
+  background-size: cover;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
