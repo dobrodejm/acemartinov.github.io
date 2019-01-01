@@ -54,7 +54,7 @@
             <div class="col s12 m6 l6">
                 <div class="card" style="background-color: #B8383B">
                     <div class="card-image">
-                        <div class="video-container">
+                        <div class="video-container hoverable">
                             <iframe src="https://www.youtube.com/embed/geNMz0J9TEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
         
             <div class="col s12 m6 l6">
                     <div class="card" style="background-color: #B8383B">
-                        <div class="card-image">
+                        <div class="card-image hoverable">
                             <a href="https://wiki.teamfortress.com/wiki/2Fort" target="_blank">
                                 <img src="img/2fort-map.jpg" alt="The 2fort map">
                             </a>
@@ -100,18 +100,23 @@
         </div>
         <div class="container">
         <div class="row">
-            <div class="center-align white-text">
-                <div class="col btn red l6 offset-l3 s10 offset-s1">The map is: <span id="mapname"></span></div>
+            <div class="center-align white-text valign-wrapper">
+                <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1 valign-wrapper"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
             </div>
         </div>
         </div>
         <!-- IMAGE GALLERY -->
-        <div class="container">
+        <div class="container"> 
         <div class="row">
-            <div class="carousel carousel-slider center">
+            <div class="container center" style="margin-bottom: 1rem;">
+                <a class="btn modal-trigger waves-effect red white-text" href="#" id="showmap">more information</a>
+                <a class="btn modal-trigger waves-effect waves-light blue white-text" href="#" id="explaingame">explain gamemode</a> 
+                <!-- explain gamemode urobit iba ako ext link na map wiki listing -->
+            </div>
+            <div class="col l8 offset-l2 carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
-                    <a class="btn modal-trigger waves-effect waves-light red white-text" href="#" id="showmap">show map</a>
-                    <button class="btn waves-effect waves-light blue white-text" href="#" id="explaingame">explain gamemode</button>
+                    
+                    
                 </div>
                 <div class="carousel-item white-text" href="#one!" id="first-image">
                 </div>
@@ -126,16 +131,24 @@
         </div>
         <!-- MODAL STORAGE -->
         <div class="modal" id="modal1">
-            
+            <div class="modal-content">
+                <h1>Payload - Upward</h1> <hr />
+            </div>
         </div>
         <div class="modal" id="modal2">   
-
+            <div class="modal-content">
+                <h1>Payload Race - Hightower</h1> <hr />
+            </div>
         </div>
         <div class="modal" id="modal3">   
-
+            <div class="modal-content">
+                <h1>CP - Process</h1> <hr />
+            </div>
         </div>
         <div class="modal" id="modal4">   
-
+            <div class="modal-content">
+                <h1>KOTH - Harvest</h1> <hr />
+            </div>
         </div>
 
     </main>
@@ -159,25 +172,33 @@
     fullWidth: true,
     indicators: true,
     onCycleTo: function(ele) {
-        console.log($(ele).index());
-        $('#explaingame').attr('data-target','modal'+$(ele).index());
+        // console.log($(ele).index());
+        // $('#explaingame').attr('data-target','modal'+$(ele).index());
         switch ($(ele).index()) {
             case 1:
                 $('#mapname').html("Payload - Upward");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 2:
                 $('#mapname').html("Payload Race - Hightower");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 3:
                 $('#mapname').html("Control Point - Process");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 4:
                 $('#mapname').html("King of the hill - Harvest");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             default:
                 alert("problem");
         }
-        $('#showmap').attr('href',''+$(ele).index());
+        // $('#showmap').attr('href',''+$(ele).index());
     }
     });
 </script>
