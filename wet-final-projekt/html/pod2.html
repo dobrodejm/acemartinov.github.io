@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <!-- MATERIALIZE CSS FRAMEWORK -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+    <link rel="stylesheet" href="../css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Webove Technologie</title>
+</head>
+<body>
+    <!-- DESKTOP NAVIGATION -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center" style="font-size: 1.5rem;">Mikuláš Dobrodej</a>
+            <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-med-and-down">
+                <li><a href="../index.html"><i class="material-icons">home</i></a></li>
+                <li><a href="pod1.html">About the game</a></li>
+                <li><a href="#" style="text-decoration: underline;">Maps</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- MOBILE NAVIGATION -->
+    <ul class="sidenav" id="mobile-sidebar">
+        <li><a href="../index.html"><i class="material-icons">home</i></a></li>
+        <li><a href="pod1.html">About the game</a></li>
+        <li><a href="#" style="text-decoration: underline;">Maps</a></li>
+    </ul>
+    
+    <main>
+    <!-- WELCOME IMAGE -->
+        <div class="parallax-container">
+            <div class="parallax"><img src="../img/wallpaper-main.jpg"></div>
+        </div>
+    
+    <div class="section grey darken-4">
+        <div class="container row">
+            <div class="col s12 m10 offset-m1">
+                <h4 class="header main-header">Maps showcase</h4> <hr />
+                <p class="white-text">Here's a couple of my favorite maps from the game, choosing the <span class="red-text tooltipped" data-position="top" data-tooltip="<i class='material-icons'>map</i>" id="hover-map"> map</span> will open it's wiki listing in a new tab, and choosing explain map will give you a short summary in a pop-up window. </p>
+            </div>
+        </div>
+        <div class="container row">
+            <div class="center-align white-text valign-wrapper">
+                <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1 valign-wrapper"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
+            </div>
+        </div>
+        <!-- IMAGE GALLERY -->
+        <div class="container row"> 
+            <div class="container center" style="margin-bottom: 1rem;">
+                <a class="btn modal-trigger waves-effect red white-text" href="#" id="showmap"><i class="material-icons">map</i></a>
+                <a class="btn modal-trigger waves-effect blue white-text" href="#" id="explaingame">explain</a> 
+                <!-- explain gamemode urobit iba ako ext link na map wiki listing -->
+            </div>
+            <div class="col l8 offset-l2 carousel carousel-slider center">
+                <div class="carousel-fixed-item center">
+                </div>
+                <div class="carousel-item white-text" href="#one!" id="first-image">
+                </div>
+                <div class="carousel-item amber white-text" href="#two!" id="second-image">                   
+                </div>
+                <div class="carousel-item green white-text" href="#three!" id="third-image">                  
+                </div>
+                <div class="carousel-item blue white-text" href="#four!" id="fourth-image">                
+                </div>
+            </div>
+        </div>
+        <!-- MODAL STORAGE -->
+        <div class="modal" id="modal1">
+            <div class="modal-content">
+                <h1>Payload - Upward</h1> <hr />
+            </div>
+        </div>
+        <div class="modal" id="modal2">   
+            <div class="modal-content">
+                <h1>Payload Race - Hightower</h1> <hr />
+            </div>
+        </div>
+        <div class="modal" id="modal3">   
+            <div class="modal-content">
+                <h1>CP - Process</h1> <hr />
+            </div>
+        </div>
+        <div class="modal" id="modal4">   
+            <div class="modal-content">
+                <h1>KOTH - Harvest</h1> <hr />
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class='grey darken-4 page-footer'>
+        <div class="row center-align">
+            <div class="col s6"> &copy; Prvy link </div>
+            <div class="col s6"> &copy; Druhy link </div>
+        </div>
+    </footer>
+<!-- Compiled and minified JavaScript -->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.parallax').parallax();
+    $('.sidenav').sidenav();
+    $('.modal').modal();
+    $('.tooltipped').tooltip();
+    });
+
+    $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+    onCycleTo: function(ele) {
+        // console.log($(ele).index());
+        // $('#explaingame').attr('data-target','modal'+$(ele).index());
+        switch ($(ele).index()) {
+            case 1:
+                $('#mapname').html("Payload - Upward");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            case 2:
+                $('#mapname').html("Payload Race - Hightower");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            case 3:
+                $('#mapname').html("Control Point - Process");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            case 4:
+                $('#mapname').html("King of the hill - Harvest");
+                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            default:
+                alert("problem");
+        }
+        // $('#showmap').attr('href',''+$(ele).index());
+    }
+    });
+</script>
+</body>
+</html>

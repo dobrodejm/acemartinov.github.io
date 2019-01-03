@@ -21,16 +21,16 @@
             <a href="#" class="brand-logo center" style="font-size: 1.5rem;">Mikuláš Dobrodej</a>
             <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="left hide-on-med-and-down">
-                <li><a href="#"><i class="material-icons">home</i></a></li>
-                <li><a href="html/pod1.html">Podstranka c. 1</a></li>
-                <li><a href="html/pod2.html">Podstranka c. 2</a></li>
+                <li><a href="#"><i class="material-icons" style="text-decoration: underline;">home</i></a></li>
+                <li><a href="html/pod1.html">About the game</a></li>
+                <li><a href="html/pod2.html">Maps</a></li>
             </ul>
         </div>
     </nav>
     <ul class="sidenav" id="mobile-sidebar">
-        <li><a href="#">Hlavna stranka</a></li>
-        <li><a href="html/pod1.html">Podstranka c. 1</a></li>
-        <li><a href="html/pod2.html">Podstranka c. 2</a></li>
+        <li><a href="#" style="text-decoration: underline;"><i class="material-icons" style="text-decoration: underline;">home</i></a></li>
+        <li><a href="html/pod1.html">About the game</a></li>
+        <li><a href="html/pod2.html">Maps</a></li>
     </ul>
     
     <main>
@@ -47,9 +47,7 @@
                 </div>
             </div>
 
-
-        <div class="container">
-        <div class="row">
+        <div class="container row">
             <!-- Card begins here -->
             <div class="col s12 m6 l6">
                 <div class="card" style="background-color: #B8383B">
@@ -66,7 +64,6 @@
             </div>
             <!-- Card ends here -->
         
-        
             <div class="col s12 m6 l6">
                     <div class="card" style="background-color: #B8383B">
                         <div class="card-image hoverable">
@@ -82,75 +79,16 @@
             </div>
         
         </div>
-        </div>     
         <div class="container">
         <div class="row">
             <div class="col s12 m10 offset-m1">
                 <h4 class="header main-header">The Game</h4> <hr />
                 <p class="white-text">The reason why I chose this game as the topic of my final project is, that this game is very dear to my heart. I used to play it way back in elementary school, where I racked up over 2.5 thousand hours. Then, wanting to do other things in life, so I took a break from it. Over the course of 2018's winter break I however redownloaded the game and have found it's charm once again.</p>
                 <p class="white-text">I mainly play support classes such as the medic or the engineer, because I really enjoy the teamwork in this game. There are many different ways in which you can play each class and that opens up tons of possibilities, as there are loads of synergies between the different class playstyles.</p>
-                <h4 class="header main-header">The Hats</h4> <hr />
-                <p class="white-text">One of the main reasons as to why this game became such a hit, was the addition of cosmetic items as a form of character customization. You could find, buy, or trade other players for different outfits, show them off on special servers dedicated just to trading, or flip them for real life cash.</p>
-                <p class="white-text">Overtime, the developers added different levels of rarity, which introduced value to otherwise uninteresting items. This made some of the most valuable items be worth thousands of dollars at their primetime.</p>
-                <h4 class="header main-header">The Economy</h4> <hr />
-                <p class="white-text">Trading between players was merely a fun addition to the game, until people started making communities surrounding it. Many websites, trading forums and chatrooms were created to discuss item prices, item rarity and their real value. Some of the more notable ones include <a href="https://scrap.tf/">scrap.tf</a> and <a href="https://backpack.tf/">backpack.tf</a>, which are nowadays more auction platforms and marketplaces than discussion forums.  </p>
             </div>
             
         </div>
-        </div>
-        <div class="container">
-        <div class="row">
-            <div class="center-align white-text valign-wrapper">
-                <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1 valign-wrapper"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
-            </div>
-        </div>
-        </div>
-        <!-- IMAGE GALLERY -->
-        <div class="container"> 
-        <div class="row">
-            <div class="container center" style="margin-bottom: 1rem;">
-                <a class="btn modal-trigger waves-effect red white-text" href="#" id="showmap">more information</a>
-                <a class="btn modal-trigger waves-effect waves-light blue white-text" href="#" id="explaingame">explain gamemode</a> 
-                <!-- explain gamemode urobit iba ako ext link na map wiki listing -->
-            </div>
-            <div class="col l8 offset-l2 carousel carousel-slider center">
-                <div class="carousel-fixed-item center">
-                    
-                    
-                </div>
-                <div class="carousel-item white-text" href="#one!" id="first-image">
-                </div>
-                <div class="carousel-item amber white-text" href="#two!" id="second-image">                   
-                </div>
-                <div class="carousel-item green white-text" href="#three!" id="third-image">                  
-                </div>
-                <div class="carousel-item blue white-text" href="#four!" id="fourth-image">                
-                </div>
-            </div>
-        </div>
-        </div>
-        <!-- MODAL STORAGE -->
-        <div class="modal" id="modal1">
-            <div class="modal-content">
-                <h1>Payload - Upward</h1> <hr />
-            </div>
-        </div>
-        <div class="modal" id="modal2">   
-            <div class="modal-content">
-                <h1>Payload Race - Hightower</h1> <hr />
-            </div>
-        </div>
-        <div class="modal" id="modal3">   
-            <div class="modal-content">
-                <h1>CP - Process</h1> <hr />
-            </div>
-        </div>
-        <div class="modal" id="modal4">   
-            <div class="modal-content">
-                <h1>KOTH - Harvest</h1> <hr />
-            </div>
-        </div>
-
+        </div>        
     </main>
     <footer class='grey darken-4 page-footer'>
         <div class="row center-align">
@@ -166,40 +104,6 @@
     $('.parallax').parallax();
     $('.sidenav').sidenav();
     $('.modal').modal();
-    });
-
-    $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true,
-    onCycleTo: function(ele) {
-        // console.log($(ele).index());
-        // $('#explaingame').attr('data-target','modal'+$(ele).index());
-        switch ($(ele).index()) {
-            case 1:
-                $('#mapname').html("Payload - Upward");
-                $('#mapname').attr('href','#modal'+$(ele).index());
-                $('#explaingame').attr('href','#modal'+$(ele).index());
-                break;
-            case 2:
-                $('#mapname').html("Payload Race - Hightower");
-                $('#mapname').attr('href','#modal'+$(ele).index());
-                $('#explaingame').attr('href','#modal'+$(ele).index());
-                break;
-            case 3:
-                $('#mapname').html("Control Point - Process");
-                $('#mapname').attr('href','#modal'+$(ele).index());
-                $('#explaingame').attr('href','#modal'+$(ele).index());
-                break;
-            case 4:
-                $('#mapname').html("King of the hill - Harvest");
-                $('#mapname').attr('href','#modal'+$(ele).index());
-                $('#explaingame').attr('href','#modal'+$(ele).index());
-                break;
-            default:
-                alert("problem");
-        }
-        // $('#showmap').attr('href',''+$(ele).index());
-    }
     });
 </script>
 </body>
