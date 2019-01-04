@@ -1,3 +1,4 @@
+/* Basic global styling */
 body {
   display: flex;
   min-height: 100vh;
@@ -18,6 +19,8 @@ p {
 .main-header {
   color: #B8383B;
 }
+/* Responsive media queries */
+/* mobile gallery */
 @media only screen and (max-width: 650px) {
   #i1 {
     background: url('../img/up.jpg');
@@ -43,13 +46,11 @@ p {
     background: url("../img/doomsday.jpg");
     background-size: 100% 66%;
   }
-  .carousel{ height: 260px !important;}
-  #explaingame, #showmap {display: none;}
-  #i1 {
-    background: url("../img/up.jpg");
-    background-size: 100% 100%;
+  .carousel{ 
+    height: 260px !important;
   }
 }
+/* mobile parallax sizing */
 @media only screen and (max-width: 500px) {
   /* adjusts size of parallax div */
   .parallax-container {
@@ -63,7 +64,7 @@ p {
 @media only screen and (min-width: 501px) {
   /* adjusts size of parallax div */
   .parallax-container {
-      height: 240px;
+    height: 240px;
   }
   /* adjusts the parallaxed img so it looks nice */
   .parallax img {
@@ -73,7 +74,7 @@ p {
 @media only screen and (min-width: 701px) {
   /* adjusts size of parallax div */
   .parallax-container {
-      height: 340px;
+    height: 340px;
   }
   /* adjusts the parallaxed img so it looks nice */
   .parallax img {
@@ -83,7 +84,7 @@ p {
 @media only screen and (min-width: 801px) {
   /* adjusts size of parallax div */
   .parallax-container {
-      height: 340px;
+    height: 340px;
   }
   /* adjusts the parallaxed img so it looks nice */
   .parallax img {
@@ -94,13 +95,14 @@ p {
 @media only screen and (min-width: 1001px) {
   /* adjusts size of parallax div */
   .parallax-container {
-      height: 400px;
+    height: 400px;
   }
   /* adjusts the parallaxed img so it looks nice */
   .parallax img {
     height: 170%;
   }
 }
+/* large screen gallery */
 @media only screen and (min-width: 651px) {
   #i1 {
     background: url("../img/up.jpg");
@@ -127,26 +129,14 @@ p {
     background-size: 100% 100%;
   }
 }
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
-/* contact info in sidebar */
-#filler-sidebar {
-  margin-top: 100px;
-}
+/* contact info for mobile in sidebar */
 #contact {
   position: absolute;
   bottom: 0;
   margin-bottom: 20%;
   width: 100%;
 }
-/* header head icon */
+/* header profile pic icon animation */
 .darken-icon {
   transition: all 0.2s ease;
 }
@@ -159,4 +149,12 @@ p {
 }
 .italic {
   font-style: italic;
+}
+/* disable selecting images, makes the page look nicer in case someone does ctrl+a */
+img {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
