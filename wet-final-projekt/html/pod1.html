@@ -160,11 +160,16 @@
 <script src="../js/jquery-3.3.1.min.js"></script>
 <script src="../js/materialize.min.js"></script>
 <script>
+    // load all of the things required for the framework with JQuery
     $(document).ready(function(){
     $('.parallax').parallax();
     $('.sidenav').sidenav();
     $('.modal').modal();
     $('.materialboxed').materialbox();
+    });
+    // make the welcome image reload every time the webpage is resized
+    $(window).on('resize', function(){
+    $('.parallax').parallax();
     });
 </script>
 </body>
