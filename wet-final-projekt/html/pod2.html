@@ -44,31 +44,35 @@
         <div class="container row">
             <div class="col s12 m10 offset-m1">
                 <h4 class="header main-header">Maps showcase</h4> <hr />
-                <p class="white-text">Here's a couple of my favorite maps from the game, choosing the <span class="red-text tooltipped" data-position="top" data-tooltip="<i class='material-icons'>map</i>" id="hover-map"> map</span> will open it's wiki listing in a new tab, and choosing explain map will give you a short summary in a pop-up window. </p>
+                <p class="white-text">Here's a couple of my favorite maps from the game, choosing the <span class="red-text tooltipped" data-position="top" data-tooltip="<i class='material-icons'>map</i>" id="hover-map"> map</span> will open it's wiki listing in a new tab, and choosing explain will give you a short summary in the form of a pop-up window. </p>
             </div>
         </div>
         <div class="container row">
-            <div class="center-align white-text valign-wrapper">
-                <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1 valign-wrapper"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
+            <div class="center-align white-text">
+                <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
             </div>
         </div>
         <!-- IMAGE GALLERY -->
         <div class="container row"> 
-            <div class="container center" style="margin-bottom: 1rem;">
-                <a class="btn modal-trigger waves-effect red white-text" href="#" id="showmap"><i class="material-icons">map</i></a>
-                <a class="btn modal-trigger waves-effect blue white-text" href="#" id="explaingame">explain</a> 
+            <div class="container center col s12" style="margin-bottom: 1rem;">
+                <a class="btn modal-trigger waves-effect red white-text" href="" id="showmap" target="_blank"><i class="material-icons">map</i></a>
+                <a class="btn modal-trigger waves-effect blue white-text" href="" id="explaingame">explain</a> 
                 <!-- explain gamemode urobit iba ako ext link na map wiki listing -->
             </div>
             <div class="col l8 offset-l2 carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
                 </div>
-                <div class="carousel-item white-text" href="#one!" id="first-image">
+                <div class="carousel-item white-text carousel-img" href="#one!" id="i1">
                 </div>
-                <div class="carousel-item amber white-text" href="#two!" id="second-image">                   
+                <div class="carousel-item amber white-text carousel-img" href="#two!" id="i2">                   
                 </div>
-                <div class="carousel-item green white-text" href="#three!" id="third-image">                  
+                <div class="carousel-item green white-text carousel-img" href="#three!" id="i3">                  
                 </div>
-                <div class="carousel-item blue white-text" href="#four!" id="fourth-image">                
+                <div class="carousel-item blue white-text carousel-img" href="#four!" id="i4">                
+                </div>
+                <div class="carousel-item blue white-text carousel-img" href="#five!" id="i5">                
+                </div>
+                <div class="carousel-item blue white-text carousel-img" href="#six!" id="i6">                
                 </div>
             </div>
         </div>
@@ -93,12 +97,21 @@
                 <h1>KOTH - Harvest</h1> <hr />
             </div>
         </div>
+        <div class="modal" id="modal4">   
+            <div class="modal-content">
+                <h1>CP - Gravelpit</h1> <hr />
+            </div>
+        </div>
+        <div class="modal" id="modal4">   
+            <div class="modal-content">
+                <h1>SD - Doomsday</h1> <hr />
+            </div>
+        </div>
     </div>
     </main>
     <footer class='grey darken-4 page-footer'>
         <div class="row center-align">
-            <div class="col s6"> &copy; Prvy link </div>
-            <div class="col s6"> &copy; Druhy link </div>
+                <div class="col s12 align-center">&copy; Mikuláš Dobrodej - 2019 </div>
         </div>
     </footer>
 <!-- Compiled and minified JavaScript -->
@@ -121,22 +134,32 @@
         switch ($(ele).index()) {
             case 1:
                 $('#mapname').html("Payload - Upward");
-                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Upward');
                 $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 2:
                 $('#mapname').html("Payload Race - Hightower");
-                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Hightower');
                 $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 3:
                 $('#mapname').html("Control Point - Process");
-                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Process');
                 $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             case 4:
                 $('#mapname').html("King of the hill - Harvest");
-                $('#mapname').attr('href','#modal'+$(ele).index());
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Harvest');
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            case 5:
+                $('#mapname').html("Control Point - Gravelpit");
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Gravel_Pit');
+                $('#explaingame').attr('href','#modal'+$(ele).index());
+                break;
+            case 6:
+                $('#mapname').html("Special Delivery - Doomsday");
+                $('#showmap').attr('href','https://wiki.teamfortress.com/wiki/Doomsday');
                 $('#explaingame').attr('href','#modal'+$(ele).index());
                 break;
             default:

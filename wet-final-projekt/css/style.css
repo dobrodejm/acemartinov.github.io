@@ -11,46 +11,118 @@ main {
   position:static;
 }
 .parallax img {
-  width: 101%;
+  width: 110%;
 }
 p {
   text-align: justify;
 }
-
 .main-header {
   color: #B8383B;
 }
 @media only screen and (max-width: 600px) {
-  .parallax-container {
-      height: 150px;
-      
+  #i1 {
+    background-size: 100% 66%;
+  }
+  #i2 {
+    background: url("../img/hightower.png");
+    background-size: 100% 66%;
+  }
+  #i3 {
+    background: url("../img/process.jpeg");
+    background-size: 100% 66%;
+  }
+  #i4 {
+    background: url("../img/harvest.jpg");
+    background-size: 100% 66%;
+  }
+  #i5 {
+    background: url("../img/gravelpit.png");
+    background-size: 100% 66%;
+  }
+  #i6 {
+    background: url("../img/doomsday.jpg");
+    background-size: 100% 66%;
   }
   .carousel{ height: 260px !important;}
   #explaingame, #showmap {display: none;}
-  #first-image {
+  #i1 {
     background: url("../img/up.jpg");
     background-size: 100% 100%;
   }
 }
-@media only screen and (max-width: 1081px) {
+@media only screen and (max-width: 500px) {
+  /* adjusts size of parallax div */
   .parallax-container {
-      height: 300px;
+      height: 240px;
+  }
+  /* adjusts the parallaxed img so it looks nice */
+  .parallax img {
+    height: 120%;
   }
 }
-#first-image {
+@media only screen and (min-width: 501px) {
+  /* adjusts size of parallax div */
+  .parallax-container {
+      height: 240px;
+  }
+  /* adjusts the parallaxed img so it looks nice */
+  .parallax img {
+    height: 140%;
+  }
+}
+@media only screen and (min-width: 701px) {
+  /* adjusts size of parallax div */
+  .parallax-container {
+      height: 340px;
+  }
+  /* adjusts the parallaxed img so it looks nice */
+  .parallax img {
+    height: 120%;
+  }
+}
+@media only screen and (min-width: 801px) {
+  /* adjusts size of parallax div */
+  .parallax-container {
+      height: 340px;
+  }
+  /* adjusts the parallaxed img so it looks nice */
+  .parallax img {
+    height: 120%;
+    width: 101%;
+  }
+}
+@media only screen and (min-width: 1001px) {
+  /* adjusts size of parallax div */
+  .parallax-container {
+      height: 400px;
+  }
+  /* adjusts the parallaxed img so it looks nice */
+  .parallax img {
+    height: 170%;
+  }
+}
+#i1 {
   background: url("../img/up.jpg");
   background-size: 100% 100%;
 }
-#second-image {
+#i2 {
   background: url("../img/hightower.png");
   background-size: 100% 100%;
 }
-#third-image {
+#i3 {
   background: url("../img/process.jpeg");
   background-size: 100% 100%;
 }
-#fourth-image {
+#i4 {
   background: url("../img/harvest.jpg");
+  background-size: 100% 100%;
+}
+#i5 {
+  background: url("../img/gravelpit.png");
+  background-size: 100% 100%;
+}
+#i6 {
+  background: url("../img/doomsday.jpg");
   background-size: 100% 100%;
 }
 .noselect {
@@ -61,4 +133,14 @@ p {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+/* contact info in sidebar */
+#filler-sidebar {
+  margin-top: 100px;
+}
+#contact {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5em;
+  width: 100%;
 }
