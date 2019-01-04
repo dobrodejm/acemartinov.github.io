@@ -16,9 +16,10 @@
 </head>
 <body>
     <!-- Ak budete resizovat stranku, aby sa ten vrchny obrazok vzdycky spravne utried -->
+    <!-- Navigation and header -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center" style="font-size: 1.5rem;">Mikuláš Dobrodej</a>
+                <a href="#modal-contact" class="brand-logo right modal-trigger hide-on-med-and-down" style="font-size: 1.5rem;"><i class="material-icons darken-icon">person</i></a>
             <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="left hide-on-med-and-down">
                 <li><a href="#"><i class="material-icons" style="text-decoration: underline;">home</i></a></li>
@@ -27,6 +28,7 @@
             </ul>
         </div>
     </nav>
+    <!-- Mobile navigation -->
     <ul class="sidenav" id="mobile-sidebar">
         <li><a href="#" style="text-decoration: underline;"><i class="material-icons" style="text-decoration: underline;">home</i></a></li>
         <li><a href="html/pod1.html">About the game</a></li>
@@ -41,8 +43,8 @@
             </p>
         </div>
     </ul>
-    
     <main>
+    <!-- Welcome image -->
         <div class="parallax-container">
             <div class="parallax"><img src="img/wallpaper-main.jpg"></div>
         </div>
@@ -55,9 +57,8 @@
                     </p>
                 </div>
             </div>
-
         <div class="container row">
-            <!-- Card begins here -->
+    <!-- Card begins here -->
             <div class="col s12 m6 l6">
                 <div class="card" style="background-color: #B8383B">
                     <div class="card-image">
@@ -71,8 +72,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Card ends here -->
-        
+    <!-- Card ends here -->
             <div class="col s12 m6 l6">
                     <div class="card" style="background-color: #B8383B">
                         <div class="card-image hoverable">
@@ -86,7 +86,6 @@
                         </div>
                     </div>
             </div>
-        
         </div>
         <div class="container">
         <div class="row">
@@ -95,9 +94,19 @@
                 <p class="white-text">The reason why I chose this game as the topic of my final project is, that this game is very dear to my heart. I used to play it way back in elementary school, where I racked up over 2.5 thousand hours. Then, wanting to do other things in life, so I took a break from it. Over the course of 2018's winter break I however redownloaded the game and have found it's charm once again.</p>
                 <p class="white-text">I mainly play support classes such as the medic or the engineer, because I really enjoy the teamwork in this game. There are many different ways in which you can play each class and that opens up tons of possibilities, as there are loads of synergies between the different class playstyles.</p>
             </div>
-            
         </div>
-        </div>        
+        </div>    
+        <!-- Storing all of the popup modals -->
+        <div class="modal center-align" id="modal-contact" style="width: 15em">
+            <span style="font-weight: bold;">Contact Me:</span> <hr />
+            <p class="center-align">
+                Mikuláš Dobrodej <br />
+                dobrodejm&#64gmail.com <br /><br />
+                +421 918 69 85 95 <br />
+                Komenského 215 <br />
+                038 52 Sučany </br />
+            </p>
+        </div>
     </main>
     <footer class='grey darken-4 page-footer'>
         <div class="row center-align">

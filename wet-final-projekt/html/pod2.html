@@ -15,10 +15,10 @@
     <title>Webove Technologie</title>
 </head>
 <body>
-    <!-- DESKTOP NAVIGATION -->
+    <!-- Navigation and header -->
     <nav>
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center" style="font-size: 1.5rem;">Mikuláš Dobrodej</a>
+            <a href="#modal-contact" class="brand-logo right modal-trigger hide-on-med-and-down" style="font-size: 1.5rem;"><i class="material-icons darken-icon">person</i></a>
             <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="left hide-on-med-and-down">
                 <li><a href="../index.html"><i class="material-icons">home</i></a></li>
@@ -27,24 +27,27 @@
             </ul>
         </div>
     </nav>
-    <!-- MOBILE NAVIGATION -->
+    <!-- Mobile navigation -->
     <ul class="sidenav" id="mobile-sidebar">
         <li><a href="../index.html"><i class="material-icons">home</i></a></li>
         <li><a href="pod1.html">About the game</a></li>
         <li><a href="#" style="text-decoration: underline;">Maps</a></li>
-        <div id="contact">
+        <div id="contact" class="center-align">
+                <span style="font-weight: bold;">Contact Me:</span>
                 <hr />
                 <p class="center-align">
                 Mikuláš Dobrodej <br />
+                dobrodejm&#64gmail.com <br />
+                +421 918 69 85 95 <br />
                 Komenského 215 <br />
                 038 52 Sučany </br />
-                +421 918 69 85 95 <br />
+                
                 </p>
             </div>
     </ul>
     
     <main>
-    <!-- WELCOME IMAGE -->
+    <!-- Welcome image -->
         <div class="parallax-container">
             <div class="parallax"><img src="../img/wallpaper-main.jpg"></div>
         </div>
@@ -56,17 +59,17 @@
                 <p class="white-text">Here's a couple of my favorite maps from the game, choosing the <span class="red-text tooltipped" data-position="top" data-tooltip="<i class='material-icons'>map</i>" id="hover-map"> map</span> will open it's wiki listing in a new tab, and choosing explain will give you a short summary in the form of a pop-up window. </p>
             </div>
         </div>
+    <!-- Dynamically changing the map title -->
         <div class="container row">
             <div class="center-align white-text">
                 <div class="col btn-flat white-text l6 offset-l3 s10 offset-s1"> <span>  The map is:  </span> <span id="mapname" class="red-text" ></span></div>
             </div>
         </div>
-        <!-- IMAGE GALLERY -->
+        <!-- Image gallery -->
         <div class="container row"> 
             <div class="container center col s12" style="margin-bottom: 1rem;">
                 <a class="btn modal-trigger waves-effect red white-text" href="" id="showmap" target="_blank"><i class="material-icons">map</i></a>
                 <a class="btn modal-trigger waves-effect blue white-text" href="" id="explaingame">explain</a> 
-                <!-- explain gamemode urobit iba ako ext link na map wiki listing -->
             </div>
             <div class="col l8 offset-l2 carousel carousel-slider center">
                 <div class="carousel-fixed-item center">
@@ -85,7 +88,17 @@
                 </div>
             </div>
         </div>
-        <!-- MODAL STORAGE -->
+        <!-- Storing all of the popup modals -->
+        <div class="modal center-align" id="modal-contact" style="width: 15em">
+            <span style="font-weight: bold;">Contact Me:</span> <hr />
+            <p class="center-align">
+                Mikuláš Dobrodej <br />
+                dobrodejm&#64gmail.com <br /><br />
+                +421 918 69 85 95 <br />
+                Komenského 215 <br />
+                038 52 Sučany </br />
+            </p>
+        </div>
         <div class="modal" id="modal1">
             <div class="modal-content">
                 <h1>Payload - Upward</h1> <hr />
@@ -106,12 +119,12 @@
                 <h1>KOTH - Harvest</h1> <hr />
             </div>
         </div>
-        <div class="modal" id="modal4">   
+        <div class="modal" id="modal5">   
             <div class="modal-content">
                 <h1>CP - Gravelpit</h1> <hr />
             </div>
         </div>
-        <div class="modal" id="modal4">   
+        <div class="modal" id="modal6">   
             <div class="modal-content">
                 <h1>SD - Doomsday</h1> <hr />
             </div>
