@@ -3,7 +3,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
 }
@@ -19,12 +18,13 @@ p {
 .main-header {
   color: #B8383B;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   #i1 {
+    background: url('../img/up.jpg');
     background-size: 100% 66%;
   }
   #i2 {
-    background: url("../img/hightower.png");
+    background: url('../img/hightower.png');
     background-size: 100% 66%;
   }
   #i3 {
@@ -36,7 +36,7 @@ p {
     background-size: 100% 66%;
   }
   #i5 {
-    background: url("../img/gravelpit.png");
+    background: url("../img/mvm-coaltown.png");
     background-size: 100% 66%;
   }
   #i6 {
@@ -101,29 +101,31 @@ p {
     height: 170%;
   }
 }
-#i1 {
-  background: url("../img/up.jpg");
-  background-size: 100% 100%;
-}
-#i2 {
-  background: url("../img/hightower.png");
-  background-size: 100% 100%;
-}
-#i3 {
-  background: url("../img/process.jpeg");
-  background-size: 100% 100%;
-}
-#i4 {
-  background: url("../img/harvest.jpg");
-  background-size: 100% 100%;
-}
-#i5 {
-  background: url("../img/gravelpit.png");
-  background-size: 100% 100%;
-}
-#i6 {
-  background: url("../img/doomsday.jpg");
-  background-size: 100% 100%;
+@media only screen and (min-width: 651px) {
+  #i1 {
+    background: url("../img/up.jpg");
+    background-size: 100% 100%;
+  }
+  #i2 {
+    background: url("../img/hightower.png");
+    background-size: 100% 100%;
+  }
+  #i3 {
+    background: url("../img/process.jpeg");
+    background-size: 100% 100%;
+  }
+  #i4 {
+    background: url("../img/harvest.jpg");
+    background-size: 100% 100%;
+  }
+  #i5 {
+    background: url("../img/mvm-coaltown.png");
+    background-size: 100% 100%;
+  }
+  #i6 {
+    background: url("../img/doomsday.jpg");
+    background-size: 100% 100%;
+  }
 }
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
@@ -150,4 +152,11 @@ p {
 }
 .darken-icon:hover {
   color: #333;
+}
+/* useful classes */
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
 }
