@@ -1,5 +1,4 @@
 # acemartinov.github.io
 
 ## This is my web portfolio
-
-I will be adding stuff here as I learn more about HTML5/JS/maybe knowing some backend in the future would be nice 🤔
+Here, I'll host all of my web based projects that I worked on. I don't plan on keeping it very neat for now, however at some point I'll remove all of the stuff that's unfinished.
