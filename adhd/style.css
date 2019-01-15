@@ -1,4 +1,4 @@
-div {
+#frame {
     width: 50%;
     display: hidden;
     margin: 10px;
@@ -10,7 +10,21 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
-.disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+h1 {
+
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+.flex-item {
+    width: 80%;
+    margin: 0 auto;
+    border: 3px solid rgba(223, 0, 0, 0.418);
+    background-color:  rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    text-align: center;
+}
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
