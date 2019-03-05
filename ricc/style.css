@@ -1,0 +1,19 @@
+form {
+    padding: 3rem;
+}
+h1, h2 {
+    text-align:center;
+}
+label {
+    font-size: 1.3rem;
+    color: teal;
+    font-weight: 600;
+}
+hr.odsek {
+    border: 1px solid red;
+    border-radius: 250%;
+}
+
+input {
+    -moz-appearance: textfield;
+}

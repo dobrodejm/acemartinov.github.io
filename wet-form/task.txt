@@ -1,0 +1,35 @@
+Zadanie pre projekt WET Form
+
+Formulár zatiaľ nemusí obsahovať dynamické prvky (to bude predmetom ďalších hodín). 
+Váš formulár by malobsahovať:
+Hlavičku – nejaký nadpis plus nejaké logo(obrázok, ikona)
+Vstupné polia:
+•meno a priezvisko,
+•adresa : ulica, mesto, PSC,
+•výber nejakého produktu (môže to byť napr. nejaký zájazd, mesto, cena). 
+Nemusí to byť zájazd. Téma je dobrovoľná,
+•počet vybraných zájazdov,
+•cena ,
+•výber platby,
+•oznamy vpodobe textu 
+(predpríprava na možnosť výberu vhotovosti alebo prevodom)  ,
+•možnosť výberu stravy počas zájazdu,
+•pre každý navolený termín
+budemožnosť výberu bez stravy, raňajky, polpenzia, plná penzia (predpríprava na možnosť výberu stravy, kde si vo vybraných termínoch vyberú typ stravy),
+•kontaktný e-mail,•kontaktný telefón ,
+•pole na odoslanie nejakej poznámky, pripomienky,
+•súhlas spodmienkami zájazdu a so spracovaním osobných údajov,
+•submit – tlačidlo odoslania formulára.
+
+Hodnotiť sa bude:•Dodržanie termínu odovzdania 20%
+
+•Zobrazenie a grafický dizajn20%(zobrazenie formulára pri rozlíšení nad 900px)
+
+•Responzívny dizajn 20%(zobrazenie formulára pri nízkom rozlíšení od  320pxdo 900px )
+
+•Náročnosť prvkov vstupných polí (CSS elementov input)20%
+
+•Originálnosť20%(nadmerná zhoda medzi odovzdanými projektami. Percentá budú strhnuté obidvom stranám. Stratu utrpí hlavne autor.
+ Poprehadzovať triedy, zmeniť farbu alebo text z Moskvy 50€ na Praha 70€ nepomôže.Na internete je naozaj veľké množstvo CSS vzorov pre prvky in  put. )
+ Projekty odovzdať e-mailom na kamposjan@gmail.com do 17.marca. Postreh zminulosti – nezabudnite,
+ že  štruktúra priečinku je taktiež prvkom hodnotenia.

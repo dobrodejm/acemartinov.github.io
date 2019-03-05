@@ -1,0 +1,68 @@
+/* hiding cancer*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+html,body {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+header {
+    width: 50%;
+    margin: auto;
+}
+header img {
+    margin: auto;
+    width: 50%;
+}
+header span {
+    margin: auto; 
+    font-size: 150%;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .main-form {
+        width: 80%;
+        margin: auto;
+    }
+ }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .main-form {
+        width: 75%;
+        margin: auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .main-form {
+        width: 70%;
+        margin: auto;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .main-form {
+        width: 60%;
+        margin: auto;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .main-form {
+        width: 60%;
+        margin: auto;
+    }
+ }

@@ -1,0 +1,11 @@
+computers:
+
+three prebuilds
+configurability
+CPU, GPU, RAM, Storage
+gpu bude optional
+
+
+*CPUcka budu objekty, budu storovat clock speed pocet c/t a potom ci maju iGPU ak hej tak sa povoli moznost
+vyhodit GPU z buildu
+
