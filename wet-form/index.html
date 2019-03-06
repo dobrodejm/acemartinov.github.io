@@ -19,6 +19,63 @@
 
     </header>
     <form action="" class="main-form">
+        <fieldset>
+        <legend>Komponenty</legend>
+        <!-- procesory -->
+        <div class="container">
+            <h4 style="text-align:center;">Procesor</h4>
+            <div class="row">
+                <div class="checkboxgroup col-4">
+                    <label for="p1"><img src="./img/8600k.png" alt=""></label>
+                    <input type="radio" name="p" id="p1" />
+                </div>
+                <div class="checkboxgroup col-4">
+                    <label for="p2"><img src="./img/9700k.png" alt=""></label>
+                    <input type="radio" name="p" id="p2" />
+                </div>
+                <div class="checkboxgroup col-4">
+                    <label for="p3"><img src="./img/2600x.png" alt=""></label>
+                    <input type="radio" name="p" id="p3" />
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- ramka -->
+        <div class="container">
+            <h4 style="text-align:center;">Pamäť</h4>
+            <div class="row">
+                <div class="checkboxgroup col-4 offset-2">
+                    <label for="r1"><img src="./img/8gb.png" alt=""></label>
+                    <input type="radio" name="r" id="r1" />
+                </div>
+                <div class="checkboxgroup col-4">
+                    <label for="r3"><img src="./img/16gb.png" alt=""></label>
+                    <input type="radio" name="r" id="r3" />
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- gpu -->
+        <div class="container">
+            <h4 style="text-align:center;">Grafická karta</h4>
+            <div class="row">
+                <div class="checkboxgroup col-4">
+                    <label for="g1"><img src="./img/2080.png" alt=""></label>
+                    <input type="radio" name="g" id="g1" />
+                </div>
+                <div class="checkboxgroup col-4">
+                    <label for="g2"><img src="./img/vega.png" alt=""></label>
+                    <input type="radio" name="g" id="g2" />
+                </div>
+                <div class="checkboxgroup col-4">
+                    <label for="g3"><img src="./img/1660.png" alt=""></label>
+                    <input type="radio" name="g" id="g3" />
+                </div>
+            </div>
+        </div>
+        </fieldset>
+        <fieldset class="form-group">
+        <legend>Osobné údaje</legend>
         <!-- Meno Priezvisko -->
         <div class="container">
             <div class="row">
@@ -67,15 +124,28 @@
                     </div>
                 </div>
             </div>
-
-
-        </div>  <!-- koniec containera -->
+        </div>
+        </fieldset>
+        <fieldset class="form-group">
+        <legend>Posledný krok</legend>
+                <div class="container">
+                        <div class="row">
+                            <div class="col-6 col-xs-12 col-sm-12" style="padding: 1em;">
+                                <input type="checkbox" name="gdpr" id="gdpr" style="display: inline;">
+                                <legend id="last" for="gdpr" style="display: inline;">Súhlasím s <a href="#">Obchodnými podmienkami</a> a záväzne objednávam tento produkt.</legend>
+                            </div>
+                            <div class="col-6 col-xs-12 col-sm-12">
+                                <input type="submit" value="Objednaj" style="padding: 1em;">
+                            </div>
+                        </div>
+                    </div>    
+        </fieldset>
     </form>
     <!-- jquery and popper -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <!-- bootstrap required js -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../bootstrap.js"></script>
     <script>
          $("#display").text(
             $(window).width()

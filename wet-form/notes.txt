@@ -5,6 +5,21 @@ configurability
 CPU, GPU, RAM, Storage
 gpu bude optional
 
+>i7 9700k $418
+>Ryzen 5 2600X $199
+>i5 8600k $259
+
+>GTX 2080 $799
+>Radeon Vega 56 $568
+>GTX 1660Ti $279
+
+>8GB $45
+>16GB $80
+
+4 obrazky
+pod nimi 4 radio buttony
+
+
 
 *CPUcka budu objekty, budu storovat clock speed pocet c/t a potom ci maju iGPU ak hej tak sa povoli moznost
 vyhodit GPU z buildu
