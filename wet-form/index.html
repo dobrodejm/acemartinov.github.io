@@ -18,7 +18,7 @@
             </div>
 
     </header>
-    <form action="" class="main-form">
+    <form action="#" class="main-form">
         <fieldset>
         <legend>Komponenty</legend>
         <!-- procesory -->
@@ -79,13 +79,13 @@
         <!-- Meno Priezvisko -->
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="firstname">Meno</label>
                         <input type="text" name="firstname" id="firstname" class="form-control">
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="lastname">Priezvisko</label>
                         <input type="text" name="lastname" id="lastname" class="form-control">
@@ -96,25 +96,27 @@
         <!-- Adresa -->
         <div class="container">
             <div class="row">
-                <div class="col-xl-8 col-lg-8 col-md-8 col-xs-12">
+                <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="ulica">Ulica</label>
                         <input type="text" name="ulica" id="ulica" class="form-control">
                     </div>  
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-4 col-xs-12"> 
-                        <label>PSČ</label>
-                        <input type="text" name="psc" id="psc" class="form-control">
-                    </div>
-                </div>
-            <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="mesto">Mesto</label>
                         <input type="text" name="mesto" id="mesto" class="form-control">
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-4"> 
+                    <div class="form-group">
+                        <label>PSČ</label>
+                        <input type="text" name="psc" id="psc" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
                     <div class="form-group">
                         <label for="krajina">Krajina</label>
                         <select name="krajina" id="krajina" class="custom-select">
@@ -124,38 +126,52 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="email">Kontaktný Email</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="tel">Kontaktný telefón</label>
+                        <input type="text" name="tel" id="tel" class="form-control">
+                    </div>
+                </div>
+            </div>
         </div>
         </fieldset>
         <fieldset class="form-group">
         <legend>Posledný krok</legend>
                 <div class="container">
-                        <div class="row">
-                            <div class="col-6 col-xs-12 col-sm-12" style="padding: 1em;">
-                                <input type="checkbox" name="gdpr" id="gdpr" style="display: inline;">
-                                <legend id="last" for="gdpr" style="display: inline;">Súhlasím s <a href="#">Obchodnými podmienkami</a> a záväzne objednávam tento produkt.</legend>
-                            </div>
-                            <div class="col-6 col-xs-12 col-sm-12">
-                                <input type="submit" value="Objednaj" style="padding: 1em;">
-                            </div>
+                    <div class="row">
+                        <div class="col-6 col-xs-12 col-sm-12" style="margin: 1em;">
+                            <input type="checkbox" name="gdpr" id="gdpr" style="display: inline;">
+                            <legend id="last" for="gdpr" style="display: inline;">Súhlasím s <a href="#">Obchodnými podmienkami</a> a so spracovaním mojich osobných údajov firmou Šašo Computers a záväzne objednávam tento produkt.</legend>
                         </div>
-                    </div>    
+                        <div class="col-6 col-xs-12 col-sm-12">
+                            <input type="submit" value="Objednaj" style="margin: 1em;">
+                        </div>
+                    </div>
+                </div>    
         </fieldset>
     </form>
-    <!-- jquery and popper -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <!-- bootstrap required js -->
-    <script src="../bootstrap.js"></script>
-    <script>
-         $("#display").text(
-            $(window).width()
-            );
-        $(window).resize(function() {
-            var viewportWidth = $(window).width();
-            $("#display").text(
-                viewportWidth
-            );
-        })
-    </script>
+<!-- jquery and popper -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!-- bootstrap required js -->
+<script src="../bootstrap.js"></script>
+<script>
+        $("#display").text(
+        $(window).width()
+        );
+    $(window).resize(function() {
+        var viewportWidth = $(window).width();
+        $("#display").text(
+            viewportWidth
+        );
+    })
+</script>
 </body>
 </html>
