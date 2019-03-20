@@ -18,7 +18,7 @@
             </div>
 
     </header>
-    <form action="#" class="main-form">
+    <form class="main-form" onsubmit="alert('Ďakujeme za vašu objednávku.')">
         <fieldset>
         <legend>Komponenty</legend>
         <!-- procesory -->
@@ -49,15 +49,15 @@
                     <input type="radio" name="r" id="r1" />
                 </div>
                 <div class="checkboxgroup col-4">
-                    <label for="r3"><img src="./img/16gb.png" alt=""></label>
-                    <input type="radio" name="r" id="r3" />
+                    <label for="r2"><img src="./img/16gb.png" alt=""></label>
+                    <input type="radio" name="r" id="r2" />
                 </div>
             </div>
         </div>
         <hr>
         <!-- gpu -->
         <div class="container">
-            <h4 style="text-align:center;">Grafická karta</h4>
+            <h4 style="text-align:center;">Grafická karta <small class="text-muted">optional</small></h4>
             <div class="row">
                 <div class="checkboxgroup col-4">
                     <label for="g1"><img src="./img/2080.png" alt=""></label>
@@ -75,6 +75,20 @@
         </div>
         </fieldset>
         <fieldset class="form-group">
+            <legend>Cena</legend>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12" style="margin: 1em;">
+                            <p>Finalna cena objednávky je: <span id="cena"></span></p>
+                            <input type="checkbox" name="dph" id="dph">
+                            <legend for="dph" class="inl"> Nie som platca DPH </legend>
+                            
+                            
+                        </div>      
+                    </div>
+                </div>    
+        </fieldset>
+        <fieldset class="form-group">
         <legend>Osobné údaje</legend>
         <!-- Meno Priezvisko -->
         <div class="container">
@@ -82,13 +96,13 @@
                 <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="firstname">Meno</label>
-                        <input type="text" name="firstname" id="firstname" class="form-control">
+                        <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Meno" required>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="lastname">Priezvisko</label>
-                        <input type="text" name="lastname" id="lastname" class="form-control">
+                        <input type="text" name="lastname" id="lastname" class="form-control" required>
                     </div>
                 </div>
             </div>
@@ -99,19 +113,19 @@
                 <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="ulica">Ulica</label>
-                        <input type="text" name="ulica" id="ulica" class="form-control">
+                        <input type="text" name="ulica" id="ulica" class="form-control" required>
                     </div>  
                 </div>
                 <div class="col-12 col-md-4">
                     <div class="form-group">
                         <label for="mesto">Mesto</label>
-                        <input type="text" name="mesto" id="mesto" class="form-control">
+                        <input type="text" name="mesto" id="mesto" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-12 col-md-4"> 
                     <div class="form-group">
                         <label>PSČ</label>
-                        <input type="text" name="psc" id="psc" class="form-control">
+                        <input type="text" name="psc" id="psc" class="form-control" required pattern="[0-9]+$">
                     </div>
                 </div>
             </div>
@@ -127,16 +141,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="email">Kontaktný Email</label>
-                        <input type="text" name="email" id="email" class="form-control">
+                        <input type="text" name="email" id="email" class="form-control" required pattern="[^ @]*@[^ @]*" placeholder="Zadajte váš email">
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-sm-6">
                     <div class="form-group">
                         <label for="tel">Kontaktný telefón</label>
-                        <input type="text" name="tel" id="tel" class="form-control">
+                        <input type="text" name="tel" id="tel" class="form-control" required pattern="\++[0-9]{12}|[0-9]{10}" placeholder="Zadajte vaše tel. číslo">
                     </div>
                 </div>
             </div>
@@ -146,9 +160,13 @@
         <legend>Posledný krok</legend>
                 <div class="container">
                     <div class="row">
+                        <div class="col-12">
+                            <label for="exampleFormControlTextarea1">Ak máte poznámku alebo pripomienku k platbe, zanechajte nám ju tu.</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>      
                         <div class="col-6 col-xs-12 col-sm-12" style="margin: 1em;">
-                            <input type="checkbox" name="gdpr" id="gdpr" style="display: inline;">
-                            <legend id="last" for="gdpr" style="display: inline;">Súhlasím s <a href="#">Obchodnými podmienkami</a> a so spracovaním mojich osobných údajov firmou Šašo Computers a záväzne objednávam tento produkt.</legend>
+                            <input type="checkbox" name="gdpr" id="gdpr" style="display: inline" required>
+                            <legend class="inl" for="gdpr">Súhlasím s <a href="#">Obchodnými podmienkami</a> a so spracovaním mojich osobných údajov firmou Šašo Computers a záväzne objednávam tento produkt.</legend>
                         </div>
                         <div class="col-6 col-xs-12 col-sm-12">
                             <input type="submit" value="Objednaj" style="margin: 1em;">
@@ -163,6 +181,8 @@
 <!-- bootstrap required js -->
 <script src="../bootstrap.js"></script>
 <script>
+    cena = 0;
+    
         $("#display").text(
         $(window).width()
         );

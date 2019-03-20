@@ -39,9 +39,13 @@ fieldset legend {
     border-bottom:none;
 }
 
-legend#last {
+legend.inl {
     font-size: 0.7em;
+    display: inline;
 }
+
+/* input validation */
+
 
 /* header saso obrazok */
 
