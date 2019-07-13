@@ -1,7 +1,14 @@
-h2,hr,p,ul {
-    margin: 10px;
-}
 body {
     background-color: #f9f9f9;
     color: #333;
+}
+.introduction {
+    text-align: center;
+    padding: 2%;
+}
+hr {
+    width: 95vw;
+}
+.big-hr {
+    margin: 2rem 0;
 }

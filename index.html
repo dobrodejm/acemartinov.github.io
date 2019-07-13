@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index-style.css">
     <link rel="stylesheet" href="bootstrap.css">
@@ -10,10 +10,90 @@
     <!-- Mikuláš Dobrodej BGMH Sučany 2017-2018 -->
 </head>
 <body>
-    <h2> ace martinov.</h1>
+    <div class="introduction">
+        <h1> Mikuláš Dobrodej</h1>
+    </div>
     <hr>
-    <p> Welcome to my portfolio, where I will list all of my web projects that I'm currently working on or have finished before.</p>
-    <p> Disclaimer: a lot of these projects are things that are abandoned/half-finished/etc I'm just too tired to fix it up. </p>
+    <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="about col-12 col-sm-5 col-md-4 col-lg-3">
+            <h2>
+                About me
+            </h2>
+            <small>
+                Will be attending an Academy Profession Bachelor's degree in Computer Science in the University College of Northern Denmark, in Aalborg. Avid listener of electronic music, and always looking for something new to explore.
+            </small>
+        </div>
+        <div class="foreword col-12 col-sm-5 col-md-4 col-lg-3 py-4 py-sm-0">
+            <h2>
+                Foreword
+            </h2>
+            <small> With this introduction page, I aim to keep track of all of my projects, no matter their state of completion. Even if it is a small idea I had at some point I want to archive it here. I will keep this updated as time goes on, and as I learn more things.</small>
+        </div>
+    </div>
+    </div>
+    <hr class="big-hr">
+    <div class="container-fluid">
+
+
+    <div class="row justify-content-center">
+        <h4 class="d-block col-9 col-sm-4 col-md-4 col-lg-3">
+            My projects
+        </h4>
+        <div class="col-9 col-sm-7 col-md-4"><!-- spacer div  --> </div>
+    </div>
+    </div>
+    <div class="main container-fluid">
+    <div class="row justify-content-center">
+        <!-- List group -->
+
+        <div class="list-group col-9 col-sm-4 col-md-4 col-lg-3" id="myList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Completed</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">In Progress</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Not In Development</a>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content col-9 col-sm-7 col-md-4" >
+            <div class="tab-pane fade show active" id="home" role="tabpanel">
+                <!-- Completed -->
+                <div class="list-group-flush">
+                    <div class="list-group-item">
+                        <a href="./vessel/">A magic boar vessel to answer all your questions</a>
+                    </div>
+                    <div class="list-group-item">
+                        <a href="./adhd/">My DJ gig log</a>
+                    </div>
+                    <div class="list-group-item">
+                        <a href="./wet-form/">project for my web technologies class</a>
+                    </div>
+                    <div class="list-group-item">
+                        <a href="./wet-final-projekt/">My final project for a web technologies class</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel">
+                <!-- In Progress -->
+                <div class="list-group-flush">
+                    <div class="list-group-item">
+                        <a href="#">This introduction page</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="messages" role="tabpanel">
+                <!-- N I D -->
+                <div class="list-group-flush">
+                    <div class="list-group-item">
+                        <a href="./timbre/">A fancy tone generator</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<!--
     <ul>
         <li><a href="./quiz/projekt.html">A multi-question quiz, a project I did for my programming class.</a></li>
             <ul>
@@ -30,5 +110,10 @@
                 <li>Learned a framework - Materialize css for styling</li>
             </ul>
     </ul>
+
+    -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="bootstrap.js"></script>
+<script src="script.js"></script>
 </body>
 </html> 
