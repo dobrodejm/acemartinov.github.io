@@ -1,13 +1,29 @@
+<!-- Mikulas Dobrodej 2019/2020 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index-style.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .introduction {
+            text-align: center;
+            padding: 2%;
+        }
+        hr {
+            width: 95vw;
+        }
+        .big-hr {
+            margin: 2rem 0;
+        }
+    </style>
     <link rel="stylesheet" href="bootstrap.css">
     <title>Welcome to my portfolio</title>
-    <!-- Mikuláš Dobrodej BGMH Sučany 2017-2018 -->
+    
 </head>
 <body>
     <div class="introduction">
@@ -105,6 +121,11 @@
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="bootstrap.js"></script>
-<script src="script.js"></script>
+<script>
+$('#myList a').on('click', function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+});
+</script>
 </body>
 </html> 
